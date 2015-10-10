@@ -1,0 +1,29 @@
+Autor: Carlos Nantes
+Data: 22/09/2015
+
+
+CTRL+SHIT+/ - unfold all methods
+CTRL+SHITF+ + - fold all methods
+CTRL+ - - unfold single method
+CTRL+ + - fold single method
+CTRL+SHIFT+G - Verifica em quais classes a classe selecionada é usada.
+CTRL+SHIFT+T - busca rápida em qualquer lugar. Apenas traz os tipos de classes java.
+ALT+SHIFT+Q - mostra opções de visualização.
+CTRL(DIREITO) + 3 - permite acessar qualquer configuração do eclipse rapidamente.
+Alt+Shift+Up - Seleciona String completamente.
+CTRL+K - vai para a próxima ocorrência da seleção atual.
+ALT+SHIFT+V - manda o método onde o cursor está dentro para outra classe. A classe será criada a partir dos 
+parâmetros do método. Um dos parâmetros poderá ser a classe.
+CTRL+M - maximiza editor ou restaura.
+CTRL+SHIFT+L - mostra lista de comandos
+CTRL+SHIFT+R - procurar qualquer tipo de arquivo ou recurso no código.
+CTRL+T - Selecione uma classe e aperte este atalho para mostrar sua hierarquia de tipos.
+CTRL+Q - Move o cursor para o local onde foi feita a última edição no arquivo.
+CTRL+O - mostra o Outline da classe. Visão dos métodos e de seu pacote.
+CTRL+E - permite alternar entre os editores abertos.
+ALT+SHIFT+X, T - executa junit teste.
+ALT+SHIFT+X, J - executa método main da classe java.
+ALT+SHIFT+X, D - executa java em modo debug.
+F3 - entra na classe ou método selecionado.
+
+
