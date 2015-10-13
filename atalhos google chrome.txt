@@ -1,0 +1,9 @@
+ctrl+shift+b - mostra bookmark
+shift-esc - task manager chrome
+ctrl+enter - adiciona www. com.br
+ctrl+enter após ctrl+f - abrirá a página do link selecionado pela pesquisa.
+ctr+g - seleciona próximo item da pesquisa.
+
+
+Extensões para produtividade:
+https://vimium.github.io/ - permite surfar no chrome usando o teclado. Rápido acesso aos links.

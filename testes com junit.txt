@@ -1,0 +1,27 @@
+Autor: Carlos Nantes
+Data: 11/10/2015
+Fontes: https://www.youtube.com/watch?v=VBzhVLozjEQ
+https://www.youtube.com/watch?v=k1DE9H8EGNA
+
+Métodos:
+========
+assertEquals(valorEsperado , valorReal);
+assertEquals("Uma mensagem para sair na exceção", valorEsperado, valorReal);
+assertTrue(boolean)
+assertFalse(varBoolean)
+
+
+Anotações:
+=========
+@Test - antes de métodos para declarar que é um método de test.
+@Before - roda antes de cada test. Usado para inicializar objetos que serão usados nos testes.
+@After - roda depois de cada método. Usado para fazer alguma limpeza após o teste ou fechar arquivos abertos no teste.
+@BeforeClass - roda apenas uma vez antes de cada classe test. Usado para features. 
+@AfterClass - roda apenas uma vez depois de cada classe test
+@assertArrayEquals(expectedOutput, actualOutput);
+@Test(expected=NullPointerException.class) - informa que o método passa quando for lançada a exceção especificada.
+@Test(timeout=2) - Para testar performance de métodos. Timeout está em milisegundos.
+@Ignore - ignora a execução de algum @Test.
+
+
+

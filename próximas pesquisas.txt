@@ -1,0 +1,16 @@
+Autor: Carlos Nantes
+Data: 11/10/2015
+
+Próximos estudos e pesquisas de interesse:
+git
+Sublime Text e seus shortcuts
+Plugins Sublime: Package control, Emmet, Origami, HtmlPretiffy
+Eclipse
+JUnit - Testes
+Eclemma - Code Coverage
+Refatoração de código
+Webservices em java
+Apache Maven
+SVN
+Jasper Reports
+Groovy

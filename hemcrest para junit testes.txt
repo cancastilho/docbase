@@ -1,0 +1,25 @@
+Autor: Carlos Nantes
+Fonte: https://www.youtube.com/watch?v=k1DE9H8EGNA
+
+Hamcrest:
+========
+
+Objetivo: Melhorar a legibilidade dos seus códigos de teste e das exceções dos métodos quando eles falham.
+
+Métodos:
+========
+assertThat(valorReal, is(equalTo(valorEsperado)))
+assertThat(valorReal, startsWith("Isso é um teste"))
+assertThat(valorReal, endsWith("fim do teste."))
+assertThat(valorReal, containsString("teste"))
+assertThat(valorReal, is(not(isEmptyString())))
+assertThat(valorReal, is(equalToIgnorinCase(("HamCrest")))
+assertThat(valorReal, 
+    everyItem(is(notNullValue(String.class)))) 
+assertThat(valorReal, is(greaterThan(0)))
+assertThat(valorReal, is(both(greaterThan(1.0).and(lessThan(4.0)))))
+assertThat(valorReal, is(closeTo(3.14)))
+assertThat(arrayReal, hasItemInArray(4))
+assertThat(arrayReal, is(arrayWithSize(5)))
+assertThat(arrayReal, is(not(emptyArray())))
+assertThat(4, isIn(array))

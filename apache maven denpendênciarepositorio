@@ -1,0 +1,211 @@
+Autor: Carlos Nantes
+Data: 11/10/2015
+Fonte: https://www.youtube.com/watch?v=oLlOv8Ln0VE&list=PLyM7S4CZk8WPrtC8AclCNxOBA8buEJdib&index=4
+http://web.cecs.pdx.edu/~whitlock/pdf/maven-2x2.pdf
+Link: http://maven.apache.org
+
+Objetivos:
+- Foi criado para promover um ambiente de desenvolvimento padrão que pode ser usado por muitos projetos.
+- Cada projeto produz alguns artefatos (arquivos jar, aplicações web, etc) do código fonte.
+- Testes unitários são complemente integrados no projeto.
+- Bibliotecas de terceiros são baixadas automaticamente e o inseridas no classpath. Não é mais necessário configurar classpath.
+- Artefatos e informação de suporte podem ser publicadas a um repositório centralizado para consumo por outros.
+- Gerencia e faz downloads de dependências.
+- Compila código, executa testes, constrói os artefatos do projeto.
+- Executa relatórios, publica artefatos e web site.
+- Não é mais necessário fazer download manual de bibliotecas e ferramentas. 
+
+
+Termos:
+=======
+archetype: arquétipo ou template.
+groudId: organização que vai desenvolver o código (br.gov.pr.maringa) e o id de login do desenvolvedor (carlosnantes). Ex: br.gov.pr.maringa.carlosnantes
+artifactId: nome do projeto.
+
+Layout de um projeto Maven:
+==========================
+
+Projeto
+    pom.xml
+    src/
+        main/ 
+            java/ (diretório base para código fonte)
+                br/gov/pr/maringa/carlosnantes/
+            resources/ (arquivos no classpath)
+                META-INF/MANIFEST.MF
+        test/
+            java/   (diretório base para código de teste)
+                br/gov/pr/maringa/carlosnantes/
+            resources/  (arquivos no classpath de teste)
+        site/   (arquivos para o web site)
+            site.xml    (descreve o site)
+            apt/    (arquivos suplementares para o site)
+            resources/
+                css/
+                    site.css
+                images/
+    target/
+        projeto-1.0.jar (Artefato do projeto)
+        surefire-reports/   (Output do unit test)
+        site/   (Web site gerado)
+
+Comandos:
+=========
+
+mvn compile - compila o código java em src/main/java
+mvn test - recompila o código fonte necessário e executa os unit tests.
+mvn package - após executar os unit tests, constrói um arquivo jar com o código fonte compilado.
+mvn site - gera um web site para o projeto com a informação obtida do pom.xml 
+mvn clean - deleta todos os artefados construídos.
+mvn eclipse:eclipse - gera um projeto do eclipse baseado em um projeto maven.
+mvn idea:idea - gera um projeto do inteliJ Idea baseado em um projeto maven.
+
+
+Artefatos construídos são colocados no diretório target/.
+
+
+pom.xml (Project Object Model):
+==============================
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>edu.pdx.cs410J.whitlock</groupId>
+    <artifactId>proj1</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>proj1</name>
+    <url>http://maven.apache.org</url>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
+
+
+modelVersion: versão do pom. 4.0.0.
+groupId: nome da organização e o desenvolvedor.
+artifactId: nome do artefato gerado pelo projeto.
+packaging: tipo de empacotamento.
+version: 1.0-SNAPSHOT. -SNAPSHOT indica que o arquivo ainda não foi liberado.
+name: por padrão é o mesmo que o artifactId.
+url: url para o site do seu projeto.
+dependencies: quais dependências seu projeto precisa para rodar. Listar as bibliotecas de terceiros que você utiliza no projeto.
+scope: informa o escopo onde a dependência será usada. Scope test informa que a biblioteca será usada apenas para testes e não será empacotada como no jar.
+
+Obs: maven usa versão do junit antiga. Lembre-se de alterá-la para a mais nova.
+
+Escopos das dependências:
+========================
+O escopo determina em qual fase a dependência é utilizada.
+- compile (padrão): bibliotecas e todas as suas dependências estão disponíveis a todas as fases de build.
+- runtime: não é necessária para compilação, apenas necessária para execução de tests e execução do projeto.
+- provided: apenas necessária em tempo de compilação, alguém irá prover a bilioteca em tempo de execução.
+- test: apenas necessária para compilar e executar testes.
+- system: biblioteca não está disponível no repositório. O local é fornecido pelo elemento systemPath do POM. Usado para bibliotecas que não podem ser publicadas no repositório do mavem. Você pode baixá-la manualmente utilizá-la do seu sistema.
+
+
+Repositórios:
+=============
+
+- Maven faz download das dependências para um repositório local em ${user.home}/.m2/repository/
+- Ao resolver as dependências, Maven procurará primeiro no repositório local antes de procurar nos outros repositórios.
+- Rodar mvn com -o ou --offline irá prevenir que maven acesse repositórios remotos.
+- O layout do repositório é baseado no group id, versão e id do artefato. Ex: o artefato JUnit 3.8.1 será baixado para .m2/junit/junit/3.8.1/junit-3.8.1.jar
+- O repositório contém uma cópia do pom para que as dependências sejam resolvidas.
+- Por padrão maven procura artefatos no repositório publico http://repo1.maven.org/maven2/
+- Um POM pode especificar outros repositórios para procura:
+<repositories>
+    <repository>
+        <id>CS410J</id>
+        <name>CS410J Maven Repository</name>
+        <url>http://web.cecs.pdx.edu/~whitlock/repository</url>
+    </repository>
+</repositories>
+
+
+Fases de build do Maven:
+========================
+Cada fase depende da fase anterior.
+
+validate: valida pom.xml e faz download das dependências necessárias.
+compile: compila o código fonte.
+test: testa o código (não pode solicitar que o código seja empacotado).
+package: constrói o artefato do projeto (arquivo jar ou war).
+integration-test: Dá deploy (implanta) o artefato a um servidor web para test de integração.
+verify: certifica que o artefato atende aos critérios de qualidade.
+install: copia o artefato para o repositório maven para uso em outros projetos locais.
+deploy: publica artefatos a repositórios remotos do Maven para ser usado por outros.
+
+Ao executar mvn package será invocado validate, compile e test.
+
+Build Goals:
+============
+
+Cada goal é uma linha de comando que corresponde a uma fase do maven.
+
+- mvn install:install-file -Dfile=/local/projeto.jar -DgroupId=br.pr.gov.maringa.carlosnantes -DartifactId=projeto -Dversion=3.2.1 -Dpackaging=jar - usado para instalar artefatos de terceiros que não estão no repositório online do maven.
+
+- mvn surefire:test - goal que executa fase de test do maven. Executa junit.
+
+
+- mvn deploy:
+ - Arquivos podem ser subidos via FTP, SCP.
+ - O site pode ser subido para um servidor web público.
+
+<distributionManagement>
+    <repository>
+        <id>whitlock-PSU</id>
+        <name>David Whitlock's PSU repository</name>
+        <url>scp://cs.pdx.edu/u/whitlock/public_html/repository</url>
+    </repository>
+    <site>
+        <id>whitlock-PSU</id>
+        <name>David Whitlock's PSU repository</name>
+        <url>scp://cs.pdx.edu/u/whitlock/public_html/site</url>
+    </site>
+</distributionManagement>
+
+${user.home}/.m2/settings.xml contém nome de usuário e senha ou senha privada usados para autenticação no servidor.
+
+É recomendável que as organizações tenham seu próprio repositório maven:
+    - Um local para dar deploy nos projetos.
+    - Desenvolvedores podem dar build mesmo se não houver conexão com a internet.
+    - Podem verificar que os artefatos vem de uma fonte confiável.
+    - É fácil fazê-lo (HTTP e scp)
+
+- deploy:deploy-file irá fazer o upload do artefato para um repositório remoto.
+
+- mvn deploy:deploy-file \
+  -Durl=scp://cs.pdx.edu/u/whilock/repository
+  -DrepositoryId=whitlock-PSU \
+  -Dfile=/home/dave/watij.jar
+  -DgroupId=com.watij \
+  -DartifactId=watij \
+  -Dversion=3.2.1
+  -Dpackaging=jar
+
+Maven gera o arquivo POM para o artefato no servidor. -DpomFile especifica um pom.xml para uma biblioteca de terceiro que contém suas dependências.
+
+Plugins:
+========
+
+
+Relatórios:
+===========
+
+mvn javadoc:javadoc - gera documentação da API.
+mvn findbugs:findbugs - irá encontrar erros no seu programa a partir de uma base de dados contendo os erros comuns em java.
+
+
+Geração do site:
+===============
+
+mvn site irá gerar:
+- Informação sobre o POM
+- Relatórios do projeto (Docs da API, resultados de testes, análise de código, etc.)
+- Outras páginas que você especificas. Estas páginas são editadas na linguagem de marcação APT (Almost Plain Text)

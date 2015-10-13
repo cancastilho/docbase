@@ -1,29 +1,129 @@
 Autor: Carlos Nantes
 Data: 22/09/2015
+Fontes: https://www.youtube.com/watch?v=X8Xw7FWw49E&list=LLTueUBO3YWXvhr9NgPAjOkg&index=26
+https://www.youtube.com/watch?v=_NnElPO5BU0&list=LLTueUBO3YWXvhr9NgPAjOkg&index=36
+
+Atalhos não classificados:
+==========================
+CTRL+SHIT+/: unfold all methods
+CTRL+SHITF+ +: fold all methods
+CTRL+-: unfold single method
+CTRL++: fold single method
+CTRL+SHIFT+G: verifica em quais classes a classe selecionada é usada.
+CTRL+SHIFT+T: busca rápida de classes java para abrir no editor.
+ALT+SHIFT+Q: mostra opções de visualização.
+
+Atalhos geração ou edição de código:
+====================================
+CTRL+ALT+DOWN - duplica linha ou seleção.
+CTRL+D - deleta linha ou seleção.
+ALT+SHIFT+S - Menu para gerar códigos, getters, setters, construtores.
+CTR+/ - Alterna entre comentar e descomentar linha ou seleção.
+ALT+SHIFT+/
+
+Atalhos para leitura de código alheio:
+======================================
+CTRL+T: Selecione uma classe e aperte este atalho para mostrar sua hierarquia de tipos.
+CTRL+O: mostra o Outline da classe. Visão dos métodos e de seu pacote.
+ALT+UP: move linha(s) para cima.
+ALT+DOWN: move linha(s) para baixo.
 
 
-CTRL+SHIT+/ - unfold all methods
-CTRL+SHITF+ + - fold all methods
-CTRL+ - - unfold single method
-CTRL+ + - fold single method
-CTRL+SHIFT+G - Verifica em quais classes a classe selecionada é usada.
-CTRL+SHIFT+T - busca rápida em qualquer lugar. Apenas traz os tipos de classes java.
-ALT+SHIFT+Q - mostra opções de visualização.
-CTRL(DIREITO) + 3 - permite acessar qualquer configuração do eclipse rapidamente.
-Alt+Shift+Up - Seleciona String completamente.
-CTRL+K - vai para a próxima ocorrência da seleção atual.
-ALT+SHIFT+V - manda o método onde o cursor está dentro para outra classe. A classe será criada a partir dos 
-parâmetros do método. Um dos parâmetros poderá ser a classe.
-CTRL+M - maximiza editor ou restaura.
-CTRL+SHIFT+L - mostra lista de comandos
-CTRL+SHIFT+R - procurar qualquer tipo de arquivo ou recurso no código.
-CTRL+T - Selecione uma classe e aperte este atalho para mostrar sua hierarquia de tipos.
-CTRL+Q - Move o cursor para o local onde foi feita a última edição no arquivo.
-CTRL+O - mostra o Outline da classe. Visão dos métodos e de seu pacote.
-CTRL+E - permite alternar entre os editores abertos.
-ALT+SHIFT+X, T - executa junit teste.
-ALT+SHIFT+X, J - executa método main da classe java.
-ALT+SHIFT+X, D - executa java em modo debug.
-F3 - entra na classe ou método selecionado.
+Atalhos de para aprender mais:
+==============================
+CTRL+SHIFT+L: mostra lista de comandos
 
 
+Atalhos de movimentação:
+=======================
+Alt+Shift+Up: Seleciona String completamente.
+CTRL + 3: permite acessar qualquer configuração do eclipse rapidamente.
+F3: entra na classe ou método selecionado.
+CTRL+K: vai para a próxima ocorrência da seleção no arquivo.
+CTRL+Q: Move o cursor para o local onde foi feita a última edição no arquivo.
+CTRL+E: permite alternar entre os editores abertos.
+ALT+ENTER: abre as propriedades do projeto selecionado no package explorer.
+CTRL+M: maximiza editor ou restaura.
+CTRL+SHIFT+R: busca rápida de qualquer tipo de arquivo ou recurso no código. Permite procurar com eficiência.
+CTRL+L: ir para linha especificada.
+CTRL + .: vai para o próximo warning ou erro de compilação.
+CTRL + ,: volta para o warning ou erro de compilação anterior.
+
+
+Atalhos de Refatoração:
+=======================
+ALT+SHIFT+M: extrai expressão selecionada para um método.
+ALT+SHIFT+L: extrai expressão para variável local.
+ALT+SHIFT+R: renomear variável no código todo (workspace).
+ALT+SHIFT+I: transforma chamada de método em código inline. Faz inline de variável local também.
+ALT+SHIFT+V: quando o cursor estiver em um método permite move método para uma classe. Se o cursor estiver no escopo de classe, permite mover a classe para outro pacote.
+ALT+SHIF+C: adiciona parâmetro em um método. Ao adicionar um parâmetro novo é possível configurar um valor default que será adicionado em todas as chamadas deste método no código do projeto todo.
+CTRL+SHIFT+F: formata código no eclipse. Se houver seleção, formata apenas seleção.
+CTRL+I: Identa o código apenas na horizontal. Diferente do format.
+CTRL+SHIFT+O (ó)- Organiza imports.
+ALT+SHIFT+T - mostra menu de refatoração para o item selecionado com mais opções:
+    - Permite extrair classes, extrair interfaces, etc.
+    - Permite mandar métodos e atributos para superclasse ou para subclasse: Pull Up ou Pull Down, respectivamente.
+    - Permite gerar classe para agrupar parametros de métodos. (Introduce Parameter Object)
+
+
+CTRL+1: Abre janela de sugestões. 
+    - Crir constante.
+    - Criar field (atributo de instância privado).
+    - Criar parâmetro no método.
+    - Renomear campo selecionado no arquivo.
+    - Renomear campo selecionado no workspace.
+    - Converter variável local em atributo de instância (field).
+    - Dividir declaração e atribuição.
+    - Inline variável declarada para mostrar método ao invés da variável.
+
+    Quando usando em new Classe()
+    - Atribuir para variável local
+    - Atribuir para field (atributo de instância)
+
+Além dos atalhos também pode ser útil usar o scrapPage para rodar pequenos códigos (snippets) em java. Vá em Arquivo>Novo>ScrapPage. Para executar o código, selecione-o e aperte CTRL+U.
+
+
+Atalhos de Execução:
+=======================
+ALT+SHIFT+X, T: executa junit teste.
+ALT+SHIFT+X, J: executa método main da classe java.
+ALT+SHIFT+X, D: executa java em modo debug.
+
+Atalhos de Debug:
+=================
+F5 - Entra em um método.
+F6 - Executa linha e vai para próxima linha.
+F8 - Vai para próximo breakpoint.
+
+
+Combinações de atalhos para produtividade:
+==========================================
+
+
+Configurações de produtividade:
+===============================
+Entre em Windows>Preferences
+Filtre por Save Actions e configure as opções abaixo.
+- Formatar
+- Organize imports.
+- Trocar loop antigo por loop aprimorado.
+- Remover variáveis locais não utilizadas.
+
+Templates para acessar via CTRL+Espaço:
+======================================
+main - método main
+fore - loop foreache
+sysout - System.out.println
+syserr - System.out.error
+test - cria teste em junit test
+
+
+Outros:
+=========
+Extrair atribuições para classe
+Extrair classe para outro arquivo
+Transformar metodo statico de uma classe para método de instancia.
+Criar superclasse para uma classe.
+Herdar uma classe.
+Selecione uma classe > Refactor e move type to new file para criar um arquivo contendo a classe selecionada.
