@@ -1,0 +1,52 @@
+Autor: Carlos Nantes
+Data: 04/06/2015
+Fonte: 
+
+
+ALT+SHIFT+SETA PARA BAIXO - permite fazer edição simultânea em múltiplas linhas. Coveniente quando é necessário adicionar algum texto igual em múltiplas linhas ou remover palavras.
+
+- CTRL+P - Função GOTO. Permite procurar e abrir arquivos de forma super rápida.
+- CTRL+P - Digite :10 para ir para linha 10.
+- CTRL+SHIFT+P - Abre a paleta de comandos.
+- CTRL+G - Vai para a linha de número especificado.
+- CTRL+L - Seleciona linha inteira.s
+- Digite uma tag e aperte tab. Ele abre e fecha a tag.
+- Digite lorem e dê tab. Ele gera um texto Lorem ipsum.
+- CTRL+0 - Seleção vai para a árvore de arquivos.
+- CTRL+SHIFT+R - Identa/formata HTML
+Segurar CTRL e clicar em multiplas linhas para criar múltiplos cursores.
+- CTRL+ALT+ENTER - insere tags envolta do texto selecionado. Caso não haja nada selecionado, insere tag de abertura e fechamento. Ao apertar enter, o cursor vai para o meio das tags.
+- CTRL+F2 - Criar um bookmark.
+- F2 - pula de bookmark a bookmark.
+- CTRL+SHIFT+F2 - Remove todos os bookmarks.
+- CTRL+SHIFT+CIMA - move linha ou seleção corrente para cima.
+- CTRL+SHIFT+BAIXO - move linha ou seleção corrente para baixo.
+- CTRL+ENTER - move cursor para a próxima linha abaixo sem quebrar linhas.
+- CTRL+SHIFT+ENTER - move cursor para a próxima linha acima sem quebrar linhas.
+- CTRL+ALT+CIMA - Cria mais um cursor na linha de cima.
+- CTRL+ALT+BAIXO - Cria mais um cursor na linha de baixo.
+- SHIFT+CLIQUE DIREITO DO MOUSE - Aperte CTRL e segure o botão direito do mouse para criar múltiplos cursores nas linhas onde o mouse passar.
+- ESC - volta para um único cursor.
+- CTRL+L e depois seta para direita - move cursor para fim da linha.
+- CTRL+L e depois seta para esquerda - move cursor para início da linha.
+- ALT+SHIFT+CIMA - adiciona 10 em um número onde o cursor está.
+- ALT+SHIFT+BAIXO - decrementa 10 em um número onde o cursor está.
+- ALT+CIMA - incrementa um número em 0.1
+- ALT+BAIXO - decrementa um número em 0.1
+- CTRL+CIMA - incrementa um número em 1
+- CTRL+BAIXO - decrementa um número em 1.
+- CTRL+D - Procurar e substituição rápida com múltiplos cursores.
+- CTRL+K CTRL+D - Pula uma seleção enquanto estiver dando CTRL+D para selecionar palavras.
+- CTRL+SHIFT+[ - Recolhe o código em três pontinhos ... 
+- CTRL+SHIFT+] - Expande o código dos três pontinhos para a visualização normal.
+- CTRL+K CTRL+1 - Recolhe todas as funções e deixa expandida apenas a função onde está o cursor.
+- CTRL+K CTRL+J - Expande o código inteiro.
+- CTRL+SHIFT+ESPACO - seleciona string dentro aspas simples ou duplas. Seleciona as aspas também. Caso faça isso dentro de uma função repetidamente, ele irá selecionando do menor escopo para o maior. É conveniente caso queira remover todo o conteúdo de uma função.
+- CTRL+SHIFT+J - Expande seleção para a identação.
+- CTRL+K CTRL+T - Esconde dentro de 3 pontinhos os atributos de todas as tags html.
+- CTRL+SHIFT+G - circunda seleção com uma tag html. Este atalho é do emmet. É possível adicionar classes, ids e outras coisas usando a escrita abreviada de CSS. Funciona muito bem quando você tem cursores múltiplos. Permite usar $$.
+- ALT+F3 - seleciona todas as correspondências com múltiplos cursores. Uma alternativa ao CTRL+D.
+- CTRL+SHIFT+; (EMMET) - Remove início e fim da mesma tag.
+
+Identar HTML: http://stackoverflow.com/questions/8839753/how-do-i-reformat-html-code-using-sublime-text-2
+
