@@ -1,0 +1,26 @@
+Autor: Carlos Nantes
+Data: 13/10/2015
+Fonte: http://www.tutorialspoint.com/design_pattern/factory_pattern.htm
+
+
+
+public class ClassFactory {
+    
+   public Classe getClass(String tipoClasse){
+      if(tipoClasse == null){
+         return null;
+      }     
+      if(tipoClasse.equalsIgnoreCase("TIPO1")){
+         return new ClasseTipo1();
+         
+      } else if(tipoClasse.equalsIgnoreCase("TIPO2")){
+         return new ClasseTipo2();
+         
+      } else if(tipoClasse.equalsIgnoreCase("TIPO3")){
+         return new ClasseTipo3();
+      }else{
+        throw new IllegalArgumentException("Tipo ["+ tipoClasse +"] não conhecido por Factory.");
+      }
+      
+   }
+}

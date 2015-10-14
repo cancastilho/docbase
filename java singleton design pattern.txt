@@ -1,0 +1,16 @@
+Autor: Carlos Nantes
+Data: 13/10/2015
+
+//Renomear tipo String para tipo pretendido
+public class StringSingleton {
+
+    private static String objeto = new String();
+    
+    
+    private Singleton() {
+    }
+    
+    public static String getInstance() {
+        return objeto;
+    }
+}

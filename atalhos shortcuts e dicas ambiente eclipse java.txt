@@ -2,6 +2,7 @@ Autor: Carlos Nantes
 Data: 22/09/2015
 Fontes: https://www.youtube.com/watch?v=X8Xw7FWw49E&list=LLTueUBO3YWXvhr9NgPAjOkg&index=26
 https://www.youtube.com/watch?v=_NnElPO5BU0&list=LLTueUBO3YWXvhr9NgPAjOkg&index=36
+http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Ftips%2Fplatform_tips.html
 
 Atalhos não classificados:
 ==========================
@@ -18,8 +19,10 @@ Atalhos geração ou edição de código:
 CTRL+ALT+DOWN - duplica linha ou seleção.
 CTRL+D - deleta linha ou seleção.
 ALT+SHIFT+S - Menu para gerar códigos, getters, setters, construtores.
-CTR+/ - Alterna entre comentar e descomentar linha ou seleção.
+CTR+/ ou CTRL+SHIFT+C - Alterna entre comentar e descomentar linha ou seleção.
 ALT+SHIFT+/
+ALT+SHIFT+A - alterna entre edição de bloco. Permite selecionar mais de uma linha para edição simultânea.
+
 
 Atalhos para leitura de código alheio:
 ======================================
@@ -48,6 +51,12 @@ CTRL+SHIFT+R: busca rápida de qualquer tipo de arquivo ou recurso no código. Per
 CTRL+L: ir para linha especificada.
 CTRL + .: vai para o próximo warning ou erro de compilação.
 CTRL + ,: volta para o warning ou erro de compilação anterior.
+CTRL + F8 ou CTRL + SHIFT + F8 - vai para próxima perspectiva. Faz caminho inverso se usar SHIFT.
+CTRL + F7 ou CTRL + SHIFT + F7 - vai para próxima visão. Faz caminho inverso se usar SHIFT. Útil para ir para visão do Junit, servers, console, etc.
+ALT+SHIFT+Q, Q - Abre lista de Visões disponíveis.
+ALT+SHIFT+Q, C - Abre visão do console.
+CTRL+J ou CTRL+SHIFT+J - Procura rápida ou procura incremental. À medida que você vai digitando o que quer procurar, o editor vai posicionando o cursor no primeiro match/combinação.
+CTRL+SHIF+I - Smart Insert. Para configurar o que quer no smart insert vá em Windows->Preferences->Java->Editor. Em particular, selecione a opção do ponto e vírgula.
 
 
 Atalhos de Refatoração:
@@ -117,6 +126,10 @@ fore - loop foreache
 sysout - System.out.println
 syserr - System.out.error
 test - cria teste em junit test
+
+Em uma classe que implementa alguma interface digite ctrl+espaco e escolha o metodo para implementar rapidamente.
+Digite o nome de um metodo que deseja criar e aperte CTRL+Espaco para criar um template dele rapidamente.
+
 
 
 Outros:
