@@ -7,3 +7,4 @@ ctr+g - seleciona próximo item da pesquisa.
 
 Extensões para produtividade:
 https://vimium.github.io/ - permite surfar no chrome usando o teclado. Rápido acesso aos links.
+Keyboard Navigation - permite surfar na web usando apenas o teclado.
