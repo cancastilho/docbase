@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Teste</title>
+
+	<!-- Configura local dos nossos pacotes. Para carregar use requires(["app/nomePacote"]) -->
+	<script src="dojoConfig.js"></script>
+	<!-- Carrega API JS do arcgis e suas dependências -->
+	<link rel="stylesheet" href="http://geoproc.maringa.pr.gov.br:8081/arcgis_js_api/library/3.14/3.14/dijit/themes/claro/claro.css">
+
+	<link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+	<script src="http://js.arcgis.com/3.14/"></script>
+	<!-- Carrega classe e executa classe desenvolvida para mostra Áreas de Abrangência da UBS -->
+	<script>
+		require(["app/main", "dojo/domReady!"], function(App){
+			App.inicializar();
+		});
+	</script>
+</head>
+<!-- Incluir class="claro" para aplicação de estilo automática nos widgets de dialog -->
+<body class="claro">
+
+</body>
+</html>

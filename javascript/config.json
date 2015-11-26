@@ -1,0 +1,5 @@
+{
+	"CONSTANTE1": "VALOR_CONSTANTE1",
+	"ARRAY": ["ITEM1, ITEM2, ITEM3"],
+	"OBJETO": { "nome":"valorNome", "idade":"valorIdade"}
+}

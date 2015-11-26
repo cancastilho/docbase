@@ -59,6 +59,11 @@ CTRL+J ou CTRL+SHIFT+J - Procura rápida ou procura incremental. À medida que voc
 CTRL+SHIF+I - Smart Insert. Para configurar o que quer no smart insert vá em Windows->Preferences->Java->Editor. Em particular, selecione a opção do ponto e vírgula.
 
 
+Atalhos de procura:
+===================
+CTRL+SHIFT+G: selecione o método que deseja procurar e aperte este atalho para encontrar todas as ocorrências do método no working set.
+
+
 Atalhos de Refatoração:
 =======================
 ALT+SHIFT+M: extrai expressão selecionada para um método.

@@ -5,6 +5,8 @@ Fonte:
 
 ALT+SHIFT+SETA PARA BAIXO - permite fazer edição simultânea em múltiplas linhas. Coveniente quando é necessário adicionar algum texto igual em múltiplas linhas ou remover palavras.
 
+- CTRL + KU - Transforma em uppercase o texto selecionado.
+- CTRL + KL - Transforma em lowercase o texto selecionado.
 - CTRL+P - Função GOTO. Permite procurar e abrir arquivos de forma super rápida.
 - CTRL+P - Digite :10 para ir para linha 10.
 - CTRL+SHIFT+P - Abre a paleta de comandos.

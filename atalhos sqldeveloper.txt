@@ -1,0 +1,4 @@
+Autor: Carlos Nantes
+Data: 13/10/2015
+
+CTRL+F7 - formata a sql.
