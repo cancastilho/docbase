@@ -1,10 +1,14 @@
 ctrl+shift+b - mostra bookmark
 shift-esc - task manager chrome
 ctrl+enter - adiciona www. com.br
-ctrl+enter após ctrl+f - abrirá a página do link selecionado pela pesquisa.
+ctrl+enter após ctrl+f - abrirá a página do link selecionado pela pesquisa. Pressione ESC e depois ENTER caso ctrl+enter abra uma popup e você tenha um bloqueador de popups.
 ctr+g - seleciona próximo item da pesquisa.
+ctrl+shift+O - abre gerenciador de favoritos e permite procurar favoritos.
+ctrl+D - adiciona página ao favoritos.
+ctrl+l - seleciona barra de endereços
 
 
 Extensões para produtividade:
 https://vimium.github.io/ - permite surfar no chrome usando o teclado. Rápido acesso aos links.
 Keyboard Navigation - permite surfar na web usando apenas o teclado.
+input focus - permite navegar pelos inputs de um form rapidamente.

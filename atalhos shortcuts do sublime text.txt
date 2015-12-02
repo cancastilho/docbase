@@ -47,6 +47,7 @@ Segurar CTRL e clicar em multiplas linhas para criar múltiplos cursores.
 - CTRL+SHIFT+G - circunda seleção com uma tag html. Este atalho é do emmet. É possível adicionar classes, ids e outras coisas usando a escrita abreviada de CSS. Funciona muito bem quando você tem cursores múltiplos. Permite usar $$.
 - ALT+F3 - seleciona todas as correspondências com múltiplos cursores. Uma alternativa ao CTRL+D.
 - CTRL+SHIFT+; (EMMET) - Remove início e fim da mesma tag.
+- F9 - Faz ordenação de linhas. Ordena linhas.
 
 Identar HTML: http://stackoverflow.com/questions/8839753/how-do-i-reformat-html-code-using-sublime-text-2
 
