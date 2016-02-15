@@ -1,0 +1,41 @@
+Autor: Carlos Nantes
+Data: 13/10/2015
+Fonte: https://www.youtube.com/watch?v=-NCgRD9-C6o&list=PLF206E906175C7E07&index=3
+
+
+interface ProcessamentoStrategy{
+    
+    void processa();
+}
+
+class Classe1Strategy implements ProcessamentoStrategy{
+    void processa(){
+       System.out.println("Forma 1 de processar.");
+    }
+}
+
+class Classe2Strategy implements ProcessamentoStrategy{
+    void processa(){
+       System.out.println("Forma 2 de processar.");
+    }
+}
+
+
+class Classe3 {
+    ProcessamentoStrategy strategy;
+    public Classe3(ProcessamentoStrategy strategy){
+        this.processamentoStrategy = strategy;
+    }
+
+    public void processaAntes(){
+        //
+    }
+    public void processaDepois(){
+        //
+    }
+    public processamentoCompleto (){
+        processaAntes();
+        strategy.processa();
+        processaDepois();
+    }
+}

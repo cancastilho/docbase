@@ -209,3 +209,21 @@ mvn site irá gerar:
 - Informação sobre o POM
 - Relatórios do projeto (Docs da API, resultados de testes, análise de código, etc.)
 - Outras páginas que você especificas. Estas páginas são editadas na linguagem de marcação APT (Almost Plain Text)
+
+
+
+Configuração versão do Java a usar no maven:
+===========================================
+Abra o pom.xml e inlua as linhas abaixo da tag dependencies:
+<build>
+    <plugins>
+        <plugin>
+            <artifactId>mave-compiler-plugin</artifactId> // obtenha essa linha da aba Effective POM no eclipse.
+            <version>2.3.1</version> // obtenha essa linha da aba Effective POM no eclipse.
+            <configuration>
+                <source>1.7</source>
+                <target>1.7</target>
+            </configuration>
+        <plugin>
+    </plugins>
+</build>

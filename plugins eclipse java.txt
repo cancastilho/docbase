@@ -1,0 +1,9 @@
+Autor: Carlos Nantes
+Data: 22/09/2015
+Fonte: Experiência e Pós-graduação UEM
+
+Eclemma - Ferramenta de cobertura de código
+Easy Shell - para abrir local das classes rapidamente
+
+
+

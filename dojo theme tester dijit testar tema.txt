@@ -1,0 +1,6 @@
+Autor: Carlos Nantes
+Data: 06/01/2016
+Fonte: https://vimeo.com/54211665
+
+Link para acessar o testador de tema do dijit:
+http://demos.dojotoolkit.org/dijit/themes/themeTester.html

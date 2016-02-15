@@ -1,0 +1,168 @@
+Fonte: https://www.youtube.com/watch?v=umJYDAYxZys&list=PLfpPfDziPdMIbc7p-_siXYwqsRnd3jrLM
+
+# Procura imagens do repositório https://docs.docker.com/registry/
+docker search --help
+
+#Procurar imagem no docker registry
+docker search redis
+
+#Procura imagem popular com 100 estrelas (Stars)
+docker search -s 100 redis
+
+#Comando pull
+docker pull --help
+
+#Lista as imagens que foram baixadas na sua máquina.
+docker images
+
+#Faz o download de um monte de imagens
+docker pull ubuntu
+
+#Baixa apenas o centos com a tag latest (docker pull image:tag)
+docker pull centos:latest
+
+#Ajuda para o comando run
+docker run --help
+
+#mostar versão do so
+cat /etc/issue
+
+#Executa o bash na imagem centos em modo interativo.
+# -i - interativo. Permite que você insira entradas no comando executado.
+# -t - root tty
+docker run -it centos:latest /bin/bash
+
+# Para sair do bash
+exit
+
+# Mostra os processos
+docker ps
+
+#Mostra os todos os processos inclusive os fechados.
+docker ps -a
+
+# Reinicia o docker no container id obtido por docker ps -a
+docker restart CONTAINTER_ID 
+
+# Abre o docker no mesmo instante que foi executado o comando do id
+docker attach CONTAINER_ID
+
+# Reemove uma imagem que você já não precisa mais.
+docker rm CONTAINER_ID
+
+
+Fonte: https://www.youtube.com/watch?v=yrE2vJDcFVM&index=2&list=PLfpPfDziPdMIbc7p-_siXYwqsRnd3jrLM
+
+#Executa um comando em uma imagem do docker. Cria um novo container para executar o comando. O container fica lá até você deletá-lo. Não parece útil executar docker run -it busybox echo 'hello'
+docker run [args] image:tag [command] [command_args]
+
+#Executa o shell na imagem busibox
+docker run -it busybox sh
+
+#Remove o docker 
+docker kill CONTAINER_ID
+
+#Remove todos os containers
+docker rm $(docker ps -aq)
+
+#Executa o comando e deleta o container após você sair da execução.
+docker run -it --rm busybox sh
+
+#Mapeia o diretório da sua máquina host /home/darkzebra/commands para o diretório /darkzebra no sistema virtual. Se qualquer dos diretórios não existir ele será criado. Útil para compartilhamento. Os arquivos serão criados com permissão root neste diretórios.
+docker run -it --rm -v /home/darkzebra/commands:/darkzebra busybox sh
+
+# Permite que os arquivos criados no compartilhamento tenham as permissões e grupo passadas por -u.
+docker run -it --rm -v /home/darkzebra/commands:/darkzebra -u 1000:1000 busybox sh.
+
+# Roda o comando em background (-d - modo detached). nginx já está instalado.
+# Mapeia uma porta no host (ex: 49160) para a porta 80 no sistema virtual.
+docker run -d -p 80 nginx
+
+#Para o comando em modo detached executado no container_id passado. 
+docker stop CONTAINER_ID
+
+#Mapeia a porta 8000 do host para redirecionar para porta 80 no virtual.
+docker run -p 8000:80 -d nginx
+
+#Mapeia mais de uma porta com múltiplos argumentos -p
+docker run -p 8000:80 -p 9000:443 -d nginx
+
+
+#Cria uma variável de ambiente MYSECRET (-e) na imagem busybox. 
+docker run -it --rm -e MYSECRET=NOSECRET busybox sh
+
+
+# Mapeia o diretório corrente para o diretório /usr/local/nginx/html. Se o diretório já existir, será substituído pelo diretório passado. Forma simples de iniciar um host de html estático.
+docker run -d -p 80:80 -v $(pwd):/usr/local/nginx/html
+
+
+# Mapeia o diretório atual para /go. Seta usuário com id 1000:1000. Compila o arquivo usando linguagem go do google. O resultado executado é um arquivo HelloWorld.out no diretório corrent da máquina host. É útil se você não tem a linguagem go instalada no sistema host mas precisa compilar o arquivo, porque você tem libraries diferentes no seu sistema ou se não tem o software necessário. 
+docker run -it --rm -v $(pwd):/go -u 1000:1000 golang:latest go build -o HelloWord.out
+
+
+FONTE: https://www.youtube.com/watch?v=Pe6a8Jbvi9E&index=3&list=PLfpPfDziPdMIbc7p-_siXYwqsRnd3jrLM
+Docker Tutorial: Setting Up a Wordpress Site Using Docker
+
+
+# Lista instalação do docker. Os diretórios compartilhados são colocados nos diretórios
+# volumes
+# vfs 
+sudo ls /var/lib/docker
+
+# 
+# --name define um nome para o container. Ao invés de usar o CONTAINER_ID você pode usar o nome my_datastore agora para gerenciar o container criado.
+docker run -v /var/lib/mysql --name=my_datastore -d busybox echo 'My datatore.'
+
+# Lista os processos.
+docker ps -a
+
+#Retorna um JSON da configuração do container my_datastore.
+# mostra o Unique id do diretório compartilhado:
+# /var/lib/docker/vfs/dir/ID_GRANDE
+docker inspect my_datastore | less
+
+
+#No docker registry tem uma imagem oficial do mysql
+# https://registry.hub.docker.com/_/mysql
+# -e exporta variavel de ambiente que define o password do root para o mysql.
+#A partir daqui você tem um container mysql pronto e executando.
+#Montar volumes no host, permite que você comece a utilizar um outro container com mysql mais novo e reutilizar a base que está no host.
+docker run --name my_mysql -e MYSQL_ROOT_PASSWORD=mysecretpw --volumes-from my_datastore -d mysql:tag
+
+# Veja que foi criado uma porta para o mysql na máquina virtual
+docker inspect my_mysql | less
+
+
+#Liga o container mysql ao container do wordpress na porta 80
+docker run --link=my_mysql:mysql -p 80:80 -d wordpress
+
+#Mostra 3 containers neste estagio: 
+# 1 compartilha os arquivos.
+# 2 container do mysql
+# 3 container do wordpress.
+docker ps -a
+
+# Separação dos containers por papéis. Ideal é ter cada container fazendo apenas uma coisa. Você pode usar link e volumes-from para compartilhar informações entre os containers.
+
+
+
+#TODO
+FONTE:https://www.youtube.com/watch?v=6nJu1oDxYvc&index=4&list=PLfpPfDziPdMIbc7p-_siXYwqsRnd3jrLM
+Titulo: Docker Tutorial: Building Docker Images Using Dockerfile
+
+Arquivo do docker
+FROM debian:latest
+MAINTEINER example@example.com
+
+
+
+#
+docker build --help
+
+#Lista TODAS as imagens que foram baixadas na sua máquina.
+docker images -a
+
+
+# Cria uma imagem demo com tag v1 (-t tagname). O ponto no final é o local onde será criada a imagens. O comando mostra um CONTAINER_ID e um IMAGE_ID. Não coloque arquivos grandes no diretório de contexto (neste caso no diretório corrente) pois poderá demorar para gerar a imagem e tomar muito espaço do hd.
+# Ao executar o build novamente ele usará o mesmo container criado.
+docker build -t darkzebra/demo:v1 .

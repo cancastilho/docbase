@@ -1,0 +1,12 @@
+Autor: Carlos Nantes
+Data: 06/01/2016
+Fonte: http://stackoverflow.com/questions/8955425/how-can-i-convert-a-series-of-images-to-a-pdf-from-the-command-line-on-linux
+
+
+Com o software imagemagick instalado, utilize o comando:
+
+$ convert page*.png mydoc.pdf
+
+ou para ordenar as páginas antes:
+
+$ ls -1 page*.jpg | sort -n | tr '\n' ' ' | sed 's/$/\ mydoc.pdf/' | xargs convert
