@@ -1,0 +1,35 @@
+Autor: Carlos Nantes
+Data: 26/11/2015
+Fontes: http://stackoverflow.com/questions/8616699/how-to-get-filteringselect-options-and-add-a-new-one-with-dojo
+
+define([
+  "dojo/store/Memory",
+  "dijit/form/FilteringSelect",
+], function(Memory, FileteringSelect){
+	
+	var store = new Memory({
+	    data: values
+	});
+
+	combobox = new FilteringSelect({
+	    id: "comboBox",
+	    store: store,
+	    searchAttr: "nome",
+	    style: "width:25%;position:relative; margin: 0 auto 10px auto;",
+	    queryExpr: "*${0}*", //mágica para filtrar por substring
+	    autoComplete: false,
+	    resizable: true,
+	    fetchProperties : {
+	        sort : [ { attribute : "nome" } ] 
+	    },
+	    onChange: function() {
+	    	//executara esta função ao trocar item do combobox
+	    }
+	}, "id_div");
+	combobox.startup();
+	combobox.focus();
+	}
+
+	combobox.set("Item", objeto ); //seleciona objeto no combobox.
+	var obj = combobox.get("Item"); //pega objeto selecionado no combobox.
+});

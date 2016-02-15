@@ -1,0 +1,11 @@
+Autor: Carlos Nantes
+Data: 19/10/2015
+Fonte: https://support.google.com/android-one/answer/2811745?hl=en-GB
+
+Block a call
+==============
+Open the Contacts app. contacts
+-To block someone, you must first add them to your contacts. Touch the contact that you want to block or add that contact.
+-Touch the Edit icon. 
+-Touch the Menu icon. Menu
+-Tick the box next to "All calls to voicemail".
