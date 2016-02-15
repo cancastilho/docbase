@@ -1,0 +1,11 @@
+Autor: Carlos Nantes
+Data: 15/02/2016
+
+Configurar axis2 no eclipse:
+Ir em https://axis.apache.org/axis2/java/core/download.cgi
+
+Download:
+- WAR distribution    axis2-1.7.0-war.zip
+- Service Archive plugin for Eclipse  axis2-eclipse-service-plugin-1.7.0.zip
+- Code Generator plugin for Eclipse   axis2-eclipse-codegen-plugin-1.7.0.zip
+- Binary distribution

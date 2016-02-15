@@ -1,3 +1,9 @@
+Para instalar no linux mint:
+apt-get install libcgroup1
+apt-get install docker.io
+apt-get install apparmor
+apt-get install cgroup-lite
+
 Fonte: https://www.youtube.com/watch?v=umJYDAYxZys&list=PLfpPfDziPdMIbc7p-_siXYwqsRnd3jrLM
 
 # Procura imagens do repositório https://docs.docker.com/registry/
