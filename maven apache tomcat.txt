@@ -5,18 +5,6 @@ http://www.mkyong.com/maven/how-to-deploy-maven-based-war-file-to-tomcat/
 
 Inserir no pom no lugar de maven-compiler-plugin plugin:
 
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.tomcat.maven</groupId>
-            <artifactId>tomcat7-maven-plugin</artifactId>
-            <version>7</version>
-        </plugin>
-    </plugins>
-</build>
-
-
-
 # Versão obtida na pós:
 <plugin>
         <groupId>org.apache.tomcat.maven</groupId>
@@ -31,3 +19,19 @@ Inserir no pom no lugar de maven-compiler-plugin plugin:
           <password>tomcat</password>
         </configuration>
 </plugin>
+
+
+Tomcat 7
+Deploy URL = http://localhost:8080/manager/text
+Command = mvn tomcat7:deploy
+Tomcat 6
+Deploy URL = http://localhost:8080/manager/
+Command = mvn tomcat6:deploy
+
+
+
+Comandos:
+=========
+mvn tomcat7:deploy 
+mvn tomcat7:undeploy 
+mvn tomcat7:redeploy 
