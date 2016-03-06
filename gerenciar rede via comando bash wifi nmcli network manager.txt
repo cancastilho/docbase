@@ -1,0 +1,50 @@
+Autor: Carlos Nantes
+Data: 05/03/2016
+Fonte:  http://www.tecmint.com/configure-network-connections-using-nmcli-tool-in-linux/
+
+nmtui - network manager gráfico
+nmcli - network manager comand line interface
+
+Man page:
+  nmcli  [ OPTIONS ] OBJECT { COMMAND | help }
+
+       OBJECT := { nm | con | dev }
+
+       OPTIONS := {
+       -t[erse]
+       -p[retty]
+       -m[mode] tabular | multiline
+       -f[ields] <field1,field2,...> | all | common
+       -e[scape] yes | no
+       -v[ersion]
+       -h[elp]
+       }
+ ...
+
+
+
+Exemplos de uso:
+
+- Mostra em qual rede está conectado
+nmcli con status
+
+- Mostra mais dados da conexão ativa.
+nmcli dev wifi | grep sim
+
+- Verifica as placas de rede. Qual está ativa e qual inativa.
+nmcli dev status
+
+- Lista todas as redes sem fio que o notebook visualizou. Mostra a data da última conexão.
+nmcli con list
+
+- Mostra as redes wifi visíveis no momento. Mostra: SSID (ou nome da rede), BSSID (mac), Modo (Infraestrutura ou outros), Frequência (22412 MHz ou outras), taxa de transferência (54 MB/s), SINAL, Segurança (WPA2, WPA WPA2, WEP) e se a conexão está ativa. 
+nmcli dev wifi
+
+- Conectar em uma rede. O id passado é o nome da rede (ou SSID)
+nmcli con up id CARLOSAP
+
+- Desconectar de uma rede sem fio
+nmcli con down id CARLOSAP
+
+- Mostra informações de mac, dns, dhcp, que estão no arquivo de configuração de rede. Em que CARLOSAP é o nome da rede sem fio.
+nmcli con list id CARLOSAP

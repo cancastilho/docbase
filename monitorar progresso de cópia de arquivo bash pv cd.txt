@@ -1,0 +1,10 @@
+Autor: Carlos Nantes
+Data: 05/03/2016
+Fonte: http://www.tecmint.com/monitor-copy-backup-tar-progress-in-linux-using-pv-command/
+
+
+Instale o comando pv.
+sudo apt-get install pv.
+
+Para monitorar uma cópia de arquivo ou backup pelo terminal use.
+pv arquivo_original > arquivo_copiado
