@@ -1,0 +1,49 @@
+Autor: Carlos Nantes
+Data: 03/10/2015
+
+
+Lista de programas que gosto de usar:
+No Linux:
+=========
+- Guake - Terminal rápido.
+- Chrome
+    -Chrome Plugins:
+        - RSS Feed Reader
+        - Speakit
+        - Spritz
+        - Web Developer
+        - AdBlock
+        - Google Tradutor
+        - Significados priberam - Dicionário de português
+- Sublime text
+- Plugins do sublime: package control, Html-CSS-JS Prettify, Color HighLighter, AutoFileName, ColorPicker, Emmet, Git, JsFormat, JSHint Gutter, LiveReloadMake, Origami, SideBarEnhancements, SublimeLinter, Sublimelinter-csslint, sublimelinter-jsl, sublimelinter-jshint, sublimelinter-php
+- Xmind
+- Dicionário Houaiss
+- Shooter
+- Astah
+- Virtual box
+- Eclipse
+- NetBeans
+- LibreOffice
+- Git
+- Glipper - Multi clippboard
+- Zealdocs - documentação offline de linguagens e frameworks
+- Gerenciador de janelas Awesome
+
+
+No Windows:
+===========
+- AutoHotKeys
+- Git Gui
+- Cygwin
+- Console2 ou ConsoleZ
+- ZoomIt - para apresentações
+- Winmerge (diff entre projetos)
+- Eclipse
+- Ferramenta de captura
+
+
+Online:
+=======
+- caniuse.com
+- code2flow
