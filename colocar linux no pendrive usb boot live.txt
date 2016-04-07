@@ -1,0 +1,25 @@
+Autor: Carlos Nantes
+Data: 27/03/2016
+Fonte: 	
+
+1 - Obtenha uma imagem usb-hdd de alguma distro linux.
+
+2 - Descubra qual dispositivo representa o pendrive conectado no computador:
+sudo fdisk -l
+
+3 - Supondo que o pendrive seja /dev/sdb (sem a numeração da partição). Execute o comando:
+cat image-da-distro.iso > /dev/sdb
+ou
+dd if=imagem-da-distro.iso of=/dev/sdb bs=4MB
+
+4 - Reinicie o computador e dê boot pelo pendrive.
+
+5 - Crie uma partição separada no pendrive para persistir os dados usando gparted com o label persistence.
+
+6 - Inclua na raíz da partição um arquivo persistence.conf com o conteúdo:
+/ union
+
+7 - Reinicie o computador e dê boot pelo pendrive. Caso sua distro seja debian 8 64 bits, na tela do gerenciador de boot, aperte ESC e insira as opções para mapear todas as alterações para o pendrive:
+live-amd64 persistence
+
+8 - As alterações realizadas serão gravadas no pen-drive.

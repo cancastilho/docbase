@@ -1,0 +1,27 @@
+Autor: Carlos Nantes
+Data: 06/04/2016
+Fonte: 
+
+Para conectar remotamente na área de trabalho de um linux mint 17.3 usando protocolo VNC faça:
+1 - No linux mint, vá no menu iniciar e procure por 
+Compartilhamento da área de trabalho.
+
+2 - Abra o compartilhamento e marque as opções:
+Compartilhamento
+x Permitir que outros usuários vejam sua área de trabalho.
+x Permitir que outros usuário controlem sua área de trabalho.
+
+Segurança
+x Exigir que o usuário digite esta senha: SENHA_SECRETA
+
+Mostrar ícone na área de notificações
+X Somente quando alguém estiver conectado.
+
+3- Abra o terminal e desabilite a encriptação do vino com o comando:
+gsettings set org.gnome.Vino require-encryption false
+
+4- Rode o vino-server no terminal ou insira esta linha para rodar automaticamente ao inicializar o sistema:
+/usr/lib/vino/vino-server
+
+O vino-server escutará na porta 5900.
+Note que a senha é guardada encriptada em base64.

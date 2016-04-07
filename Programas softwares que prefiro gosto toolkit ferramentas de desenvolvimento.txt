@@ -41,6 +41,9 @@ No Windows:
 - Winmerge (diff entre projetos)
 - Eclipse
 - Ferramenta de captura
+- PhraseExpress - atalhos, autocomplete, multiclipboard.
+- Bower
+- Nodejs
 
 
 Online:

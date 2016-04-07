@@ -1,0 +1,45 @@
+Autor: Carlos Nantes
+Data: 21/03/2016
+Fonte: 
+http://projects.spring.io/spring-roo/#quick-start
+http://stackoverflow.com/questions/29768426/perform-command-does-not-work-in-spring-roo
+
+
+Quickstart
+============
+mkdir hello
+cd hello
+roo
+roo> hint
+roo> project setup --topLevelPackage com.foo --projectName projeto
+roo> jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY
+roo> entity jpa --class ~.domain.Timer --testAutomatically
+roo> field string --fieldName message --notNull
+roo> hint web mvc
+roo> web mvc setup
+roo> web mvc all --package ~.web
+roo> selenium test --controller ~.web.TimerController
+roo> security setup
+roo> perform tests
+roo> perform package
+roo> perform eclipse
+roo> quit
+mvn tomcat:run
+
+Observações:
+============
+- Para corrigir problema em perform tests, acesse o diretório home do maven e copie mvn.cmd para mvn.bat.
+- Se o comando mvn tomcat:run não funcionar verifique se já existe uma instância do tomcat rodando na pora 8080
+- Execute script --file clinic.roo para gerar um exemplo de aplicação com roo.	
+
+
+Resumo
+=======
+http://docs.spring.io/spring-roo/docs/1.3.2.RELEASE/reference/html/beginning.html
+
+Para desenvolvimento, use:
+jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY 
+
+Conforme  Para configurar base de dados para produção use:
+mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=10.2.0.2 -Dpackaging=jar -Dfile=/path/to/file
+
