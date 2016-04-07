@@ -2,7 +2,7 @@ Autor: Carlos Nantes
 Data: 03/10/2015
 
 
-Lista de programas que gosto de usar:
+Lista de programas que gosto de usar ou que me interessam:
 No Linux:
 =========
 - Guake - Terminal rápido.
@@ -44,6 +44,7 @@ No Windows:
 - PhraseExpress - atalhos, autocomplete, multiclipboard.
 - Bower
 - Nodejs
+- MobaXTerm
 
 
 Online:
