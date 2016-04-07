@@ -20,13 +20,8 @@ X Somente quando alguém estiver conectado.
 3- Abra o terminal e desabilite a encriptação do vino com o comando:
 gsettings set org.gnome.Vino require-encryption false
 
-4- Rode o vino-server no terminal e conecte com um client vnc:
+4- Rode o vino-server no terminal ou insira esta linha para rodar automaticamente ao inicializar o sistema:
 /usr/lib/vino/vino-server
-
-5- Para incluir o vino-server para executar na inicialização do sistema, vá em iniciar e procure "Aplicativos de Seção".
-
-6- Adicione o /usr/lib/vino/vino-server nesta lista.
-
 
 O vino-server escutará na porta 5900.
 Note que a senha é guardada encriptada em base64.
