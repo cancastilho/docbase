@@ -1,5 +1,0 @@
-Autor: Carlos Nantes
-Data: 05/03/2016
-
-Atualizar um software instalado via apt-get:
-apt-get install --only-upgrade <packagename>

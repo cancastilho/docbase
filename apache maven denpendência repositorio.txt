@@ -1,23 +1,28 @@
-Autor: Carlos Nantes
-Data: 11/10/2015
-Fonte: https://www.youtube.com/watch?v=oLlOv8Ln0VE&list=PLyM7S4CZk8WPrtC8AclCNxOBA8buEJdib&index=4
-http://web.cecs.pdx.edu/~whitlock/pdf/maven-2x2.pdf
-Link: http://maven.apache.org
+<p>Autor: Carlos Nantes</p>
+<p>Data: 11/10/2015</p>
+<p>Fonte: 
+<ul>
+    <li><a href="https://www.youtube.com/watch?v=oLlOv8Ln0VE&list=PLyM7S4CZk8WPrtC8AclCNxOBA8buEJdib&index=4">https://www.youtube.com/watch?v=oLlOv8Ln0VE&list=PLyM7S4CZk8WPrtC8AclCNxOBA8buEJdib&index=4</a></li>
+    <li><a href="http://web.cecs.pdx.edu/~whitlock/pdf/maven-2x2.pdf">http://web.cecs.pdx.edu/~whitlock/pdf/maven-2x2.pdf</a></li>
+    <li>http://maven.apache.org</li>
+</ul>
+</p>
 
-Objetivos:
-- Foi criado para promover um ambiente de desenvolvimento padrão que pode ser usado por muitos projetos.
-- Cada projeto produz alguns artefatos (arquivos jar, aplicações web, etc) do código fonte.
-- Testes unitários são complemente integrados no projeto.
-- Bibliotecas de terceiros são baixadas automaticamente e o inseridas no classpath. Não é mais necessário configurar classpath.
-- Artefatos e informação de suporte podem ser publicadas a um repositório centralizado para consumo por outros.
-- Gerencia e faz downloads de dependências.
-- Compila código, executa testes, constrói os artefatos do projeto.
-- Executa relatórios, publica artefatos e web site.
-- Não é mais necessário fazer download manual de bibliotecas e ferramentas. 
+<p>Objetivos:</p>
+<ul>
+    <li>Foi criado para promover um ambiente de desenvolvimento padrão que pode ser usado por muitos projetos.</li> 
+<li>Cada projeto produz alguns artefatos (arquivos jar, aplicações web, etc) do código fonte.</li> 
+<li>Testes unitários são complemente integrados no projeto.</li> 
+<li>Bibliotecas de terceiros são baixadas automaticamente e o inseridas no classpath. Não é mais necessário configurar classpath.</li> 
+<li>Artefatos e informação de suporte podem ser publicadas a um repositório centralizado para consumo por outros.</li> 
+<li>Gerencia e faz downloads de dependências.</li> 
+<li>Compila código, executa testes, constrói os artefatos do projeto.</li> 
+<li>Executa relatórios, publica artefatos e web site.</li> 
+<li>Não é mais necessário fazer download manual de bibliotecas e ferramentas.</li>  
+</ul>
 
-
-Termos:
-=======
+<h3>Termos:</h3>
+<hr>
 archetype: arquétipo ou template.
 groudId: organização que vai desenvolver o código (br.gov.pr.maringa) e o id de login do desenvolvedor (carlosnantes). Ex: br.gov.pr.maringa.carlosnantes
 artifactId: nome do projeto.
@@ -66,7 +71,7 @@ Artefatos construídos são colocados no diretório target/.
 
 pom.xml (Project Object Model):
 ==============================
-
+<pre>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -86,6 +91,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
     </dependencies>
 </project>
 
+</pre>
 
 modelVersion: versão do pom. 4.0.0.
 groupId: nome da organização e o desenvolvedor.
@@ -119,6 +125,7 @@ Repositórios:
 - O repositório contém uma cópia do pom para que as dependências sejam resolvidas.
 - Por padrão maven procura artefatos no repositório publico http://repo1.maven.org/maven2/
 - Um POM pode especificar outros repositórios para procura:
+<pre>
 <repositories>
     <repository>
         <id>CS410J</id>
@@ -126,7 +133,7 @@ Repositórios:
         <url>http://web.cecs.pdx.edu/~whitlock/repository</url>
     </repository>
 </repositories>
-
+</pre>
 
 Fases de build do Maven:
 ========================
@@ -156,7 +163,7 @@ Cada goal é uma linha de comando que corresponde a uma fase do maven.
 - mvn deploy:
  - Arquivos podem ser subidos via FTP, SCP.
  - O site pode ser subido para um servidor web público.
-
+<pre>
 <distributionManagement>
     <repository>
         <id>whitlock-PSU</id>
@@ -169,7 +176,7 @@ Cada goal é uma linha de comando que corresponde a uma fase do maven.
         <url>scp://cs.pdx.edu/u/whitlock/public_html/site</url>
     </site>
 </distributionManagement>
-
+</pre>
 ${user.home}/.m2/settings.xml contém nome de usuário e senha ou senha privada usados para autenticação no servidor.
 
 É recomendável que as organizações tenham seu próprio repositório maven:
@@ -215,6 +222,7 @@ mvn site irá gerar:
 Configuração versão do Java a usar no maven:
 ===========================================
 Abra o pom.xml e inlua as linhas abaixo da tag dependencies:
+<pre>
 <build>
     <plugins>
         <plugin>
@@ -227,3 +235,4 @@ Abra o pom.xml e inlua as linhas abaixo da tag dependencies:
         <plugin>
     </plugins>
 </build>
+</pre>
