@@ -2,7 +2,7 @@
 <p>Data: 14/05/2016</p>
 
 <p>Para configurar o proxy no terminal, digite as linhas abaixo. Esta configuração é temporária e será desfeita após fechar o terminal. Uma forma de persisti-la, inclusive após reiniciar o computador, é colocar as linhas abaixo no arquivo /etc/environment.</p>
-<pre>
+<pre id="comando">
 export http_proxy=http://USUARIO:SENHA@URL_DO_PROXY:PORTA
 export https_proxy=http://USUARIO:SENHA@URL_DO_PROXY:PORTA
 </pre>
@@ -16,8 +16,39 @@ export https_proxy=http://USUARIO:SENHA@proxy.uem.br:3128
 
 <p>Construa o comando:</p>
 <form>
-	<label for="usuario">Usuário:</label><input type="text" id="usuario"  /><br>
-	<label for="senha">Senha:</label><input type="text" id="senha"  /><br>
-	<label for="proxy">Proxy:</label><input type="text" id="proxy"  /><br>
-	<label for="porta">Porta:</label><input type="text" id="porta"  /><br>
+  <div class="form-group">
+    <label for="usuario">Usuário:</label>
+    <input type="text" id="usuario" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label for="senha">Senha:</label>
+    <input type="text" class="form-control" id="senha"  />
+  </div>
+  <div class="form-group">
+    <label for="proxy">Proxy:</label>
+    <input type="text" id="proxy" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label for="porta">Porta:</label>
+    <input type="text" id="porta" class="form-control" />
+  </div>
 </form>
+
+<div id="comandoConstruido">
+</div>
+
+<script type="text/javascript">
+    function mostraComando(evento){
+          var comando = $('#comando').text();
+            var usuario = $('#usuario').val();
+            var senha = $('#senha').val();
+            var proxy = $('#proxy').val();
+            var porta = $('#porta').val();
+            var novoComando = comando.replace('USUARIO', usuario).replace('SENHA', senha).replace('URL_DO_PROXY', proxy).replace('PORTA', porta);
+        $('#comandoConstruido').html( novoComando );
+    }
+    $('#usuario').keyDown(mostraComando);
+    $('#senha').keyDown(mostraComando);
+    $('#proxy').keyDown(mostraComando);
+    $('#porta').keyDown(mostraComando);
+</script>
