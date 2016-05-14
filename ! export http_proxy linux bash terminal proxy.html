@@ -1,0 +1,15 @@
+<p>Autor: Carlos Nantes</p>
+<p>Data: 14/05/2016</p>
+
+<p>Para configurar o proxy no terminal, digite as linhas abaixo. Esta configuração é temporária e será desfeita após fechar o terminal. Uma forma de persisti-la, inclusive após reiniciar o computador, é colocar as linhas abaixo no arquivo /etc/environment.</p>
+<pre>
+export http_proxy=http://USUARIO:SENHA@URL_DO_PROXY:PORTA
+export https_proxy=http://USUARIO:SENHA@URL_DO_PROXY:PORTA
+</pre>
+
+<p>Exemplo:</p>
+
+<pre>
+export http_proxy=http://USUARIO:SENHA@proxy.uem.br:3128
+export https_proxy=http://USUARIO:SENHA@proxy.uem.br:3128
+</pre>
