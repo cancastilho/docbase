@@ -1,8 +1,8 @@
-<p>Autor: Carlos Nantes</p>
+ <p>Autor: Carlos Nantes</p>
 <p>Data: 14/05/2016</p>
 
 <p>Para configurar o proxy no terminal, digite as linhas abaixo. Esta configuração é temporária e será desfeita após fechar o terminal. Uma forma de persisti-la, inclusive após reiniciar o computador, é colocar as linhas abaixo no arquivo /etc/environment.</p>
-<pre id="comando">
+<pre>
 export http_proxy=http://USUARIO:SENHA@URL_DO_PROXY:PORTA
 export https_proxy=http://USUARIO:SENHA@URL_DO_PROXY:PORTA
 </pre>
@@ -35,20 +35,24 @@ export https_proxy=http://USUARIO:SENHA@proxy.uem.br:3128
 </form>
 
 <div id="comandoConstruido">
+    <pre>
+    export http_proxy=http://USUARIO:SENHA@URL_DO_PROXY:PORTA
+    export https_proxy=http://USUARIO:SENHA@URL_DO_PROXY:PORTA
+    </pre>
 </div>
 
 <script type="text/javascript">
     function mostraComando(evento){
-          var comando = $('#comando').text();
+          var comando = "<pre>export http_proxy=http://USUARIO:SENHA@URL_DO_PROXY:PORTA \nexport https_proxy=http://USUARIO:SENHA@URL_DO_PROXY:PORTA</pre>";
             var usuario = $('#usuario').val();
             var senha = $('#senha').val();
             var proxy = $('#proxy').val();
             var porta = $('#porta').val();
-            var novoComando = comando.replace('USUARIO', usuario).replace('SENHA', senha).replace('URL_DO_PROXY', proxy).replace('PORTA', porta);
+            var novoComando = comando.replace(new RegExp('USUARIO', 'g'), usuario).replace(new RegExp('SENHA', 'g'), senha).replace(new RegExp('URL_DO_PROXY', 'g'), proxy).replace(new RegExp('PORTA', 'g'), porta);
         $('#comandoConstruido').html( novoComando );
     }
-    $('#usuario').keyDown(mostraComando);
-    $('#senha').keyDown(mostraComando);
-    $('#proxy').keyDown(mostraComando);
-    $('#porta').keyDown(mostraComando);
+    $('#usuario').keyup(mostraComando);
+    $('#senha').keyup(mostraComando);
+    $('#proxy').keyup(mostraComando);
+    $('#porta').keyup(mostraComando);
 </script>
