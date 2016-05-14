@@ -18,27 +18,27 @@ export https_proxy=http://USUARIO:SENHA@proxy.uem.br:3128
 <form>
   <div class="form-group">
     <label for="usuario">Usuário:</label>
-    <input type="text" id="usuario" class="form-control" />
+    <input type="text" id="usuario" class="form-control" value="usuario"/>
   </div>
   <div class="form-group">
     <label for="senha">Senha:</label>
-    <input type="text" class="form-control" id="senha"  />
+    <input type="text" class="form-control" id="senha" value="senha" />
   </div>
   <div class="form-group">
     <label for="proxy">Proxy:</label>
-    <input type="text" id="proxy" class="form-control" />
+    <input type="text" id="proxy" class="form-control" value="proxy" />
   </div>
   <div class="form-group">
     <label for="porta">Porta:</label>
-    <input type="text" id="porta" class="form-control" />
+    <input type="text" id="porta" class="form-control" value="porta" />
   </div>
 </form>
 
 <div id="comandoConstruido">
-    <pre>
-    export http_proxy=http://USUARIO:SENHA@URL_DO_PROXY:PORTA
-    export https_proxy=http://USUARIO:SENHA@URL_DO_PROXY:PORTA
-    </pre>
+<pre>
+export http_proxy=http://USUARIO:SENHA@URL_DO_PROXY:PORTA
+export https_proxy=http://USUARIO:SENHA@URL_DO_PROXY:PORTA
+</pre>
 </div>
 
 <script type="text/javascript">
