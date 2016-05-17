@@ -1,0 +1,41 @@
+<p>Autor: Carlos Nantes</p>
+<p>Data: 16/05/2016</p>
+<p>Fontes:
+<ul>
+<li><a href="https://tomcat.apache.org/tomcat-8.0-doc/rewrite.html#comments_thread_post">https://tomcat.apache.org/tomcat-8.0-doc/rewrite.html#comments_thread_post</a></li>
+<li><a href="https://tomcat.apache.org/tomcat-8.0-doc/config/host.html">https://tomcat.apache.org/tomcat-8.0-doc/config/host.html</a></li>
+</ul></p>
+
+<h3>Como configurar o tomcat 8 para aceitar requisições case-insensitive?</h3>
+<p>É possível que necessite de urls case-insensitive. No tomcat 8 existe uma maneira embutida de realizar esta configuração.</p>
+<p>Suponha que queiramos que a webapp manager em http://localhost:8080/manager possa ser acessada desprezando o tamanho das letras do 'manager'. No tomcat 8, basta realizar o procedimento abaixo. </p>
+<p>Acesse o arquivo <code>${CATALINA_HOME}/conf/server.xml</code> e inclua e inclua a seguinte linha dentro da tag host:</p>
+<pre>
+   &lt;Valve className="org.apache.catalina.valves.rewrite.RewriteValve" /&gt;
+</pre>
+<p>Deve ficar parecido com o trecho abaixo:</p>
+<pre>
+...
+&lt;Host name="localhost" appBase="webapps" unpackWARs="true" autoDeploy="true"&gt;
+    ...
+    &lt;Valve className="org.apache.catalina.valves.rewrite.RewriteValve" /&gt;
+&lt;/Host&gt;
+...
+</pre>
+<p>Crie um arquivo chamado rewrite.config em ${CATALINA_HOME}/conf/Catalina/localhost/ e escreva a seguinte regra nele:</p>
+<pre>
+RewriteCond  %{REQUEST_URI}    ^/manager/(.*)  [NC]
+RewriteRule  ^/.*    /manager/%1
+</pre>
+<p>Note que se um requisição GET /manager/html for feita então:</p>
+<ul>
+    <li>%{REQUEST_URI} - conterá a string /manager/html</li>
+    <li>^/manager/(.*) - indica que sempre que a requisição começar com /manager então deverá aplicar a RewriteRule abaixo. [NC] indica que a condição deverá realizar comparação de forma case-insensitive.</li>
+    <li>%1 - contém tudo que vier depois de /manager/ na linha de RewriteCond. Se o padrão fosse ^/(manager)/(.*) na linha de RewriteCond então na linha da RewriteRule poderia ser usado %1 para se referir a string manager e %2 para se referir a qualquer coisa que vem depois de /manager/ (indicado pela expressão regular (.*). </li>
+</ul>
+
+<p>Caso fosse do interesse deixar todas as aplicações webs fazer receber requisições case-insensitive bastaria usar o seguinte em ${CATALINA_HOME}/conf/Catalina/localhost/rewrite.config:</p>
+<pre>
+RewriteCond  %{REQUEST_URI}    ^(.*)  [NC]
+RewriteRule  ^/.*    %1
+</pre>

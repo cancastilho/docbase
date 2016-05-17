@@ -4,7 +4,7 @@
 <ul>
     <li><a href="https://www.youtube.com/watch?v=oLlOv8Ln0VE&list=PLyM7S4CZk8WPrtC8AclCNxOBA8buEJdib&index=4">https://www.youtube.com/watch?v=oLlOv8Ln0VE&list=PLyM7S4CZk8WPrtC8AclCNxOBA8buEJdib&index=4</a></li>
     <li><a href="http://web.cecs.pdx.edu/~whitlock/pdf/maven-2x2.pdf">http://web.cecs.pdx.edu/~whitlock/pdf/maven-2x2.pdf</a></li>
-    <li>http://maven.apache.org</li>
+    <li><a href="http://maven.apache.org">http://maven.apache.org</a></li>
 </ul>
 </p>
 
@@ -26,10 +26,10 @@
 archetype: arquétipo ou template.
 groudId: organização que vai desenvolver o código (br.gov.pr.maringa) e o id de login do desenvolvedor (carlosnantes). Ex: br.gov.pr.maringa.carlosnantes
 artifactId: nome do projeto.
+<h3>Layout de um projeto Maven:</h3>
+<hr>
 
-Layout de um projeto Maven:
-==========================
-
+<pre>
 Projeto
     pom.xml
     src/
@@ -53,7 +53,7 @@ Projeto
         projeto-1.0.jar (Artefato do projeto)
         surefire-reports/   (Output do unit test)
         site/   (Web site gerado)
-
+</pre>
 Comandos:
 =========
 
