@@ -1,0 +1,20 @@
+<p>Autor: Carlos Nantes</p>
+<p>FONTE: <a href="http://stackoverflow.com/questions/11525703/port-forwarding-in-windows">http://stackoverflow.com/questions/11525703/port-forwarding-in-windows</a></p>
+
+<h2>Como fazer encaminhamento de porta no Windows</h2>
+
+<p>Para adicionar o encaminhamento:</p>
+<pre>
+netsh interface portproxy add v4tov4 listenport=8081 listenaddress=172.16.0.248 connectport=6080 connectaddress=172.16.0.248
+</pre>
+
+<p>Para remover o encaminhamento:</p>
+<pre>
+netsh interface portproxy delete v4tov4 listenport=8081 listenaddress=172.16.0.248
+</pre>
+<p>Para mostrar os redirecionamentos feitos:</p>
+<pre>
+netsh interface portproxy show all
+</pre>
+
+<p>É possível que o redirecionamento trave, sem explicação até o momento. Neste caso, remova o redirecionamento e adicione-o novamente.</p> 
