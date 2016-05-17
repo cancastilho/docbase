@@ -1,3 +1,4 @@
+<h2>Como configurar o tomcat 8 para aceitar requisições case-insensitive?</h2>
 <p>Autor: Carlos Nantes</p>
 <p>Data: 16/05/2016</p>
 <p>Fontes:
@@ -6,7 +7,6 @@
 <li><a href="https://tomcat.apache.org/tomcat-8.0-doc/config/host.html">https://tomcat.apache.org/tomcat-8.0-doc/config/host.html</a></li>
 </ul></p>
 
-<h3>Como configurar o tomcat 8 para aceitar requisições case-insensitive?</h3>
 <p>É possível que necessite de urls case-insensitive. No tomcat 8 existe uma maneira embutida de realizar esta configuração.</p>
 <p>Suponha que queiramos que a webapp manager em http://localhost:8080/manager possa ser acessada desprezando o tamanho das letras do 'manager'. No tomcat 8, basta realizar o procedimento abaixo. </p>
 <p>Acesse o arquivo <code>${CATALINA_HOME}/conf/server.xml</code> e inclua e inclua a seguinte linha dentro da tag host:</p>
