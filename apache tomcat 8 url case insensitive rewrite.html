@@ -2,7 +2,7 @@
 <p>Data: 16/05/2016</p>
 <p>Fontes:
 <ul>
-<li><a href="https://tomcat.apache.org/tomcat-8.0-doc/rewrite.html#comments_thread_post">https://tomcat.apache.org/tomcat-8.0-doc/rewrite.html#comments_thread_post</a></li>
+<li><a href="https://tomcat.apache.org/tomcat-8.0-doc/rewrite.html">https://tomcat.apache.org/tomcat-8.0-doc/rewrite.html</a></li>
 <li><a href="https://tomcat.apache.org/tomcat-8.0-doc/config/host.html">https://tomcat.apache.org/tomcat-8.0-doc/config/host.html</a></li>
 </ul></p>
 
@@ -22,7 +22,7 @@
 &lt;/Host&gt;
 ...
 </pre>
-<p>Crie um arquivo chamado rewrite.config em ${CATALINA_HOME}/conf/Catalina/localhost/ e escreva a seguinte regra nele:</p>
+<p>Crie um arquivo chamado <code>rewrite.config</code> em <code>${CATALINA_HOME}/conf/Catalina/localhost/</code> e escreva a seguinte regra nele:</p>
 <pre>
 RewriteCond  %{REQUEST_URI}    ^/manager/(.*)  [NC]
 RewriteRule  ^/.*    /manager/%1
@@ -34,7 +34,7 @@ RewriteRule  ^/.*    /manager/%1
     <li>%1 - contém tudo que vier depois de /manager/ na linha de RewriteCond. Se o padrão fosse ^/(manager)/(.*) na linha de RewriteCond então na linha da RewriteRule poderia ser usado %1 para se referir a string manager e %2 para se referir a qualquer coisa que vem depois de /manager/ (indicado pela expressão regular (.*). </li>
 </ul>
 
-<p>Caso fosse do interesse deixar todas as aplicações webs fazer receber requisições case-insensitive bastaria usar o seguinte em ${CATALINA_HOME}/conf/Catalina/localhost/rewrite.config:</p>
+<p>Caso fosse do interesse deixar todas as aplicações web receber requisições case-insensitive bastaria usar o seguinte em <code>${CATALINA_HOME}/conf/Catalina/localhost/rewrite.config</code>:</p>
 <pre>
 RewriteCond  %{REQUEST_URI}    ^(.*)  [NC]
 RewriteRule  ^/.*    %1
