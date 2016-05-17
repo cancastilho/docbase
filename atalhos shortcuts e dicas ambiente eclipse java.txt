@@ -4,30 +4,30 @@ Fontes: https://www.youtube.com/watch?v=X8Xw7FWw49E&list=LLTueUBO3YWXvhr9NgPAjOk
 https://www.youtube.com/watch?v=_NnElPO5BU0&list=LLTueUBO3YWXvhr9NgPAjOkg&index=36
 http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Ftips%2Fplatform_tips.html
 
-Atalhos não classificados:
+Atalhos nÃ£o classificados: 
 ==========================
 CTRL+SHIT+/: unfold all methods
 CTRL+SHITF+ +: fold all methods
 CTRL+-: unfold single method
 CTRL++: fold single method
-CTRL+SHIFT+G: verifica em quais classes a classe selecionada é usada.
-CTRL+SHIFT+T: busca rápida de classes java para abrir no editor.
-ALT+SHIFT+Q: mostra opções de visualização.
+CTRL+SHIFT+G: verifica em quais classes a classe selecionada Ã© usada.
+CTRL+SHIFT+T: busca rÃ¡pida de classes java para abrir no editor.
+ALT+SHIFT+Q: mostra opÃ§Ãµes de visualizaÃ§Ã£o.
 
-Atalhos geração ou edição de código:
+Atalhos geraÃ§Ã£o ou ediÃ§Ã£o de cÃ³digo:
 ====================================
-CTRL+ALT+DOWN - duplica linha ou seleção.
-CTRL+D - deleta linha ou seleção.
-ALT+SHIFT+S - Menu para gerar códigos, getters, setters, construtores.
-CTR+/ ou CTRL+SHIFT+C - Alterna entre comentar e descomentar linha ou seleção.
+CTRL+ALT+DOWN - duplica linha ou seleÃ§Ã£o.
+CTRL+D - deleta linha ou seleÃ§Ã£o.
+ALT+SHIFT+S - Menu para gerar cÃ³digos, getters, setters, construtores.
+CTR+/ ou CTRL+SHIFT+C - Alterna entre comentar e descomentar linha ou seleÃ§Ã£o.
 ALT+SHIFT+/
-ALT+SHIFT+A - alterna entre edição de bloco. Permite selecionar mais de uma linha para edição simultânea.
+ALT+SHIFT+A - alterna entre ediÃ§Ã£o de bloco. Permite selecionar mais de uma linha para ediÃ§Ã£o simultÃ¢nea.
 
 
-Atalhos para leitura de código alheio:
+Atalhos para leitura de cÃ³digo alheio:
 ======================================
 CTRL+T: Selecione uma classe e aperte este atalho para mostrar sua hierarquia de tipos.
-CTRL+O: mostra o Outline da classe. Visão dos métodos e de seu pacote.
+CTRL+O: mostra o Outline da classe. VisÃ£o dos mÃ©todos e de seu pacote.
 ALT+UP: move linha(s) para cima.
 ALT+DOWN: move linha(s) para baixo.
 
@@ -37,96 +37,96 @@ Atalhos de para aprender mais:
 CTRL+SHIFT+L: mostra lista de comandos
 
 
-Atalhos de movimentação:
+Atalhos de movimentaÃ§Ã£o:
 =======================
 Alt+Shift+Up: Seleciona String completamente.
-CTRL + 3: permite acessar qualquer configuração do eclipse rapidamente.
-F3: entra na classe ou método selecionado.
-CTRL+K: vai para a próxima ocorrência da seleção no arquivo.
-CTRL+Q: Move o cursor para o local onde foi feita a última edição no arquivo.
+CTRL + 3: permite acessar qualquer configuraÃ§Ã£o do eclipse rapidamente.
+F3: entra na classe ou mÃ©todo selecionado.
+CTRL+K: vai para a prÃ³xima ocorrÃªncia da seleÃ§Ã£o no arquivo.
+CTRL+Q: Move o cursor para o local onde foi feita a Ãºltima ediÃ§Ã£o no arquivo.
 CTRL+E: permite alternar entre os editores abertos.
 ALT+ENTER: abre as propriedades do projeto selecionado no package explorer.
 CTRL+M: maximiza editor ou restaura.
-CTRL+SHIFT+R: busca rápida de qualquer tipo de arquivo ou recurso no código. Permite procurar com eficiência.
+CTRL+SHIFT+R: busca rÃ¡pida de qualquer tipo de arquivo ou recurso no cÃ³digo. Permite procurar com eficiÃªncia.
 CTRL+L: ir para linha especificada.
-CTRL + .: vai para o próximo warning ou erro de compilação.
-CTRL + ,: volta para o warning ou erro de compilação anterior.
-CTRL + F8 ou CTRL + SHIFT + F8 - vai para próxima perspectiva. Faz caminho inverso se usar SHIFT.
-CTRL + F7 ou CTRL + SHIFT + F7 - vai para próxima visão. Faz caminho inverso se usar SHIFT. Útil para ir para visão do Junit, servers, console, etc.
-ALT+SHIFT+Q, Q - Abre lista de Visões disponíveis.
-ALT+SHIFT+Q, C - Abre visão do console.
-CTRL+J ou CTRL+SHIFT+J - Procura rápida ou procura incremental. À medida que você vai digitando o que quer procurar, o editor vai posicionando o cursor no primeiro match/combinação.
-CTRL+SHIF+I - Smart Insert. Para configurar o que quer no smart insert vá em Windows->Preferences->Java->Editor. Em particular, selecione a opção do ponto e vírgula.
+CTRL + .: vai para o prÃ³ximo warning ou erro de compilaÃ§Ã£o.
+CTRL + ,: volta para o warning ou erro de compilaÃ§Ã£o anterior.
+CTRL + F8 ou CTRL + SHIFT + F8 - vai para prÃ³xima perspectiva. Faz caminho inverso se usar SHIFT.
+CTRL + F7 ou CTRL + SHIFT + F7 - vai para prÃ³xima visÃ£o. Faz caminho inverso se usar SHIFT. Ãštil para ir para visÃ£o do Junit, servers, console, etc.
+ALT+SHIFT+Q, Q - Abre lista de VisÃµes disponÃ­veis.
+ALT+SHIFT+Q, C - Abre visÃ£o do console.
+CTRL+J ou CTRL+SHIFT+J - Procura rÃ¡pida ou procura incremental. Ã€ medida que vocÃª vai digitando o que quer procurar, o editor vai posicionando o cursor no primeiro match/combinaÃ§Ã£o.
+CTRL+SHIF+I - Smart Insert. Para configurar o que quer no smart insert vÃ¡ em Windows->Preferences->Java->Editor. Em particular, selecione a opÃ§Ã£o do ponto e vÃ­rgula.
 
 
 Atalhos de procura:
 ===================
-CTRL+SHIFT+G: selecione o método que deseja procurar e aperte este atalho para encontrar todas as ocorrências do método no working set.
+CTRL+SHIFT+G: selecione o mÃ©todo que deseja procurar e aperte este atalho para encontrar todas as ocorrÃªncias do mÃ©todo no working set.
 
 
-Atalhos de Refatoração:
+Atalhos de RefatoraÃ§Ã£o:
 =======================
-ALT+SHIFT+M: extrai expressão selecionada para um método.
-ALT+SHIFT+L: extrai expressão para variável local.
-ALT+SHIFT+R: renomear variável no código todo (workspace).
-ALT+SHIFT+I: transforma chamada de método em código inline. Faz inline de variável local também.
-ALT+SHIFT+V: quando o cursor estiver em um método permite move método para uma classe. Se o cursor estiver no escopo de classe, permite mover a classe para outro pacote.
-ALT+SHIF+C: adiciona parâmetro em um método. Ao adicionar um parâmetro novo é possível configurar um valor default que será adicionado em todas as chamadas deste método no código do projeto todo.
-CTRL+SHIFT+F: formata código no eclipse. Se houver seleção, formata apenas seleção.
-CTRL+I: Identa o código apenas na horizontal. Diferente do format.
-CTRL+SHIFT+O (ó)- Organiza imports.
-ALT+SHIFT+T - mostra menu de refatoração para o item selecionado com mais opções:
+ALT+SHIFT+M: extrai expressÃ£o selecionada para um mÃ©todo.
+ALT+SHIFT+L: extrai expressÃ£o para variÃ¡vel local.
+ALT+SHIFT+R: renomear variÃ¡vel no cÃ³digo todo (workspace).
+ALT+SHIFT+I: transforma chamada de mÃ©todo em cÃ³digo inline. Faz inline de variÃ¡vel local tambÃ©m.
+ALT+SHIFT+V: quando o cursor estiver em um mÃ©todo permite move mÃ©todo para uma classe. Se o cursor estiver no escopo de classe, permite mover a classe para outro pacote.
+ALT+SHIF+C: adiciona parÃ¢metro em um mÃ©todo. Ao adicionar um parÃ¢metro novo Ã© possÃ­vel configurar um valor default que serÃ¡ adicionado em todas as chamadas deste mÃ©todo no cÃ³digo do projeto todo.
+CTRL+SHIFT+F: formata cÃ³digo no eclipse. Se houver seleÃ§Ã£o, formata apenas seleÃ§Ã£o.
+CTRL+I: Identa o cÃ³digo apenas na horizontal. Diferente do format.
+CTRL+SHIFT+O (Ã³)- Organiza imports.
+ALT+SHIFT+T - mostra menu de refatoraÃ§Ã£o para o item selecionado com mais opÃ§Ãµes:
     - Permite extrair classes, extrair interfaces, etc.
-    - Permite mandar métodos e atributos para superclasse ou para subclasse: Pull Up ou Pull Down, respectivamente.
-    - Permite gerar classe para agrupar parametros de métodos. (Introduce Parameter Object)
+    - Permite mandar mÃ©todos e atributos para superclasse ou para subclasse: Pull Up ou Pull Down, respectivamente.
+    - Permite gerar classe para agrupar parametros de mÃ©todos. (Introduce Parameter Object)
 
 
-CTRL+1: Abre janela de sugestões. 
+CTRL+1: Abre janela de sugestÃµes. 
     - Crir constante.
-    - Criar field (atributo de instância privado).
-    - Criar parâmetro no método.
+    - Criar field (atributo de instÃ¢ncia privado).
+    - Criar parÃ¢metro no mÃ©todo.
     - Renomear campo selecionado no arquivo.
     - Renomear campo selecionado no workspace.
-    - Converter variável local em atributo de instância (field).
-    - Dividir declaração e atribuição.
-    - Inline variável declarada para mostrar método ao invés da variável.
+    - Converter variÃ¡vel local em atributo de instÃ¢ncia (field).
+    - Dividir declaraÃ§Ã£o e atribuiÃ§Ã£o.
+    - Inline variÃ¡vel declarada para mostrar mÃ©todo ao invÃ©s da variÃ¡vel.
 
     Quando usando em new Classe()
-    - Atribuir para variável local
-    - Atribuir para field (atributo de instância)
+    - Atribuir para variÃ¡vel local
+    - Atribuir para field (atributo de instÃ¢ncia)
 
-Além dos atalhos também pode ser útil usar o scrapPage para rodar pequenos códigos (snippets) em java. Vá em Arquivo>Novo>ScrapPage. Para executar o código, selecione-o e aperte CTRL+U.
+AlÃ©m dos atalhos tambÃ©m pode ser Ãºtil usar o scrapPage para rodar pequenos cÃ³digos (snippets) em java. VÃ¡ em Arquivo>Novo>ScrapPage. Para executar o cÃ³digo, selecione-o e aperte CTRL+U.
 
 
-Atalhos de Execução:
+Atalhos de ExecuÃ§Ã£o:
 =======================
 ALT+SHIFT+X, T: executa junit teste.
-ALT+SHIFT+X, J: executa método main da classe java.
+ALT+SHIFT+X, J: executa mÃ©todo main da classe java.
 ALT+SHIFT+X, D: executa java em modo debug.
 
 Atalhos de Debug:
 =================
-F5 - Entra em um método.
-F6 - Executa linha e vai para próxima linha.
-F8 - Vai para próximo breakpoint.
+F5 - Entra em um mÃ©todo.
+F6 - Executa linha e vai para prÃ³xima linha.
+F8 - Vai para prÃ³ximo breakpoint.
 
 
-Combinações de atalhos para produtividade:
+CombinaÃ§Ãµes de atalhos para produtividade:
 ==========================================
 
 
-Configurações de produtividade:
+ConfiguraÃ§Ãµes de produtividade:
 ===============================
 Entre em Windows>Preferences
-Filtre por Save Actions e configure as opções abaixo.
+Filtre por Save Actions e configure as opÃ§Ãµes abaixo.
 - Formatar
 - Organize imports.
 - Trocar loop antigo por loop aprimorado.
-- Remover variáveis locais não utilizadas.
+- Remover variÃ¡veis locais nÃ£o utilizadas.
 
-Templates para acessar via CTRL+Espaço:
+Templates para acessar via CTRL+EspaÃ§o:
 ======================================
-main - método main
+main - mÃ©todo main
 fore - loop foreache
 sysout - System.out.println
 syserr - System.out.error
@@ -139,9 +139,9 @@ Digite o nome de um metodo que deseja criar e aperte CTRL+Espaco para criar um t
 
 Outros:
 =========
-Extrair atribuições para classe
+Extrair atribuiÃ§Ãµes para classe
 Extrair classe para outro arquivo
-Transformar metodo statico de uma classe para método de instancia.
+Transformar metodo statico de uma classe para mÃ©todo de instancia.
 Criar superclasse para uma classe.
 Herdar uma classe.
 Selecione uma classe > Refactor e move type to new file para criar um arquivo contendo a classe selecionada.
