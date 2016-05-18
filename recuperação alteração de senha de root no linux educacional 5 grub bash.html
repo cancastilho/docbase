@@ -1,9 +1,9 @@
-<p>Autor: Carlos Nantes</p>
+<p>Autor: Carlos Nantes</p> 
 <p>Data: 18/05/2016</p>
 
 <h2>Restaurando ou trocando a senha de root no LE 5</h2>
 <p>1. Ligue o computador. No menu do GRUB selecione a linha "Linux Educacional 5.0, com Linux 3.5.0-30-generic".</p>
-<p>2. Aperte a tecla 'e' para editar a linha de inicilizaÁ„o do sistema.</p>
+<p>2. Aperte a tecla 'e' para editar a linha de iniciliza√ß√£o do sistema.</p>
 <p>3. Modifique a linha: </p>
 <pre>
 linux /boot/vmlinuz-3.5.0-30-generic root=UIID=NUMERO_GIGANTE ro quiet splash $vt_handoff
@@ -13,17 +13,17 @@ linux /boot/vmlinuz-3.5.0-30-generic root=UIID=NUMERO_GIGANTE ro quiet splash $v
 linux /boot/vmlinuz-3.5.0-30-generic root/dev/sda1 rw quiet splash init=/bin/bash
 </pre>
 <p>4. Aperte F10 ou CTRL+X.</p>
-<p>Abrir· um terminal no modo root. Neste terminal digite o comando:</p>
+<p>Abrir√° um terminal no modo root. Neste terminal digite o comando:</p>
 <pre>
 passwd
 </pre>
 <p>5. Insira a nova senha duas vezes e pronto. A senha do root foi alterada.</p>
-<p>Caso queira mudar a senha de algum outro usu·rio, ex: professor, digite:</p>
+<p>Caso queira mudar a senha de algum outro usu√°rio, ex: professor, digite:</p>
 <pre>
 passwd professor
 </pre>
-<p>... e insira duas vezes a nova senha para o usu·rio professor.</p>
+<p>... e insira duas vezes a nova senha para o usu√°rio professor.</p>
 <p>6. Reinicie o computador.</p>
-<p>7. Inicie o computador normalmente e acesse o usu·rio com a nova senha definida.</p>
-<p>ObservaÁ„o: o teclado USB pode n„o funcionar no shell aberto pelo grub, portanto, use um teclado PS/2.</p>
+<p>7. Inicie o computador normalmente e acesse o usu√°rio com a nova senha definida.</p>
+<p>Observa√ß√£o: o teclado USB pode n√£o funcionar no shell aberto pelo grub, portanto, use um teclado PS/2.</p>
 
