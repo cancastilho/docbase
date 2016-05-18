@@ -5,13 +5,9 @@
 <p>1. Ligue o computador. No menu do GRUB selecione a linha "Linux Educacional 5.0, com Linux 3.5.0-30-generic".</p>
 <p>2. Aperte a tecla 'e' para editar a linha de inicilização do sistema.</p>
 <p>3. Modifique a linha: </p>
-<pre>
-linux /boot/vmlinuz-3.5.0-30-generic root=UIID=NUMERO_GIGANTE ro quiet splash $vt_handoff
-</pre>
+<pre>linux /boot/vmlinuz-3.5.0-30-generic root=UIID=NUMERO_GIGANTE ro quiet splash $vt_handoff</pre>
 <p>para</p>
-<pre> 
-linux /boot/vmlinuz-3.5.0-30-generic root/dev/sda1 rw quiet splash init=/bin/bash
-</pre>
+<pre>linux /boot/vmlinuz-3.5.0-30-generic root/dev/sda1 rw quiet splash init=/bin/bash</pre>
 <p>4. Aperte F10 ou CTRL+X.</p>
 <p>Abrirá um terminal no modo root. Neste terminal digite o comando:</p>
 <pre>

@@ -1,0 +1,4 @@
+Data: 04/06/2015
+Fonte: http://stackoverflow.com/questions/15245144/copy-file-permissions-but-not-files
+
+chmod -r --reference arquivoOuDirOrigem arquivoOuDirDestino
