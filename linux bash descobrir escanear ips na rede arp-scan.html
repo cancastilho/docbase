@@ -1,0 +1,16 @@
+<p>Autor: Carlos Nantes</p>
+<p>Data: 24/05/2015</p>
+<p>Fonte: <a href="http://askubuntu.com/questions/224559/how-to-find-all-the-used-ip-addresses-on-a-network">http://askubuntu.com/questions/224559/how-to-find-all-the-used-ip-addresses-on-a-network</a></p>
+
+<h2>Como vascuhar os ips em uma rede?</h2>
+<p>No linux instale o arp-scan:</p>
+<pre>
+sudo apt-get install arp-scan
+</pre>
+<p>Após estar conectado na rede execute:</p>
+<pre>
+sudo arp-scan --interface wlan0 192.168.1.0/24    ou  
+sudo arp-scan --interface wlan0 --localnet
+</pre>
+<p>O comando irá retornar os ips ativos.</p>
+<p>Note que --interface indica qual interface utilizar para escanear os ips.</p>
