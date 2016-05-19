@@ -1,0 +1,336 @@
+Autor: Carlos Nantes
+Data: 18/05/2016
+
+Rascunho
+=========
+
+Resumo de PyQuick - Google Developers
+Versão do python do curso 2.4
+
+Fonte: https://www.youtube.com/watch?v=tKTZoB2Vjuk
+==================================================
+é case-sensitive
+não necessita declarar variável
+identação é importante
+variável pode apontar para qualquer tipo de dado
+python não é muito rápido. É rápido para você criar o código, mas não executá-lo.
+
+
+casts:
+int("2")
+str(44)
+"string" + 4 não funciona
+"string" + str(4) funciona
+
+#!/usr/bin/python2.4 -tt     -tt executa código corretamente mesmo quando há mistura de tabs e espaços para identação.
+
+#Importa biblioteca de sistema
+import sys
+
+def main():
+	#mostra array de parâmetros passados na linha de comando
+	print sys.argv 
+
+#Permite carregar um programa mas sem executar. Neste caso, a igualdade será falsa e não executará a função. Boilerplate code. Coloque no fim do arquivo
+if __name__ == '__main__':
+	main()
+
+
+dir(sys) - mostra o que tem no módulo sys
+help(sys) - mostra a documentação do módulo 
+help(sys.exit) - mostra a documentação da função
+len("carlos") - quantidade de chars de uma string
+
+len() - chama a função len
+len - refere-se à função len mas não a executa.
+
+bloco de codigo sempre começa com : e termina após terminar a identação. A identação forçada resolve problemas de códigos escritos por desenvolvedores diferentes que usam braços { } em frente ao método e outros que usam embaixo.
+
+def funcao:
+	...
+# == compara profundamente o objeto
+if nome == 'Carlos':
+	nome = nome + ' Augusto'
+	... ainda dentro do if
+
+# Parênteses funciona mas não é recomendado
+if (nome == 'Carlos'):
+	...
+else:
+	...
+
+# Operadores lógicos
+or
+and
+
+valores falsos - 0, string nula
+
+Python só verifica se uma linha de código está errado, quando ele de fato à executa.
+
+Strings:
+=======
+São iguais:
+a = 'Hello'
+a = "Hello"
+são imutáveis.
+a + "teste" - concatecação. Criará uma outra string 
+a.lower() - retorna uma nova string. Mas 'a' continua com o valor antigo.
+"string".find('i') - retorna 3, que é o indice de i.
+"Carlos"[1] - retorna caracter 'a'.
+'Hi %s I have %d donuts' %('Alice', 42) - String de formatação. Retorna 'Hi Alice I have 42 donuts'
+"Carlos"[1:3] = slice, fatia. Retorna substring iniciando do índice 1 (inclusive) até 3 (não inclusive). Retorna 'ar'.
+"Carlos"[1:] = fatia. Mostra 'arlos'
+"Carlos"[:-3] = omite os 3 últimos caracteres da string. Retorna 'Car'.
+"1;2;3;4".split(':') - quebra a string no separador : e retorna uma lista.
+"p1 p2 p3 p4".split() - sem parâmetro faz o split em espaços
+
+
+Fonte: https://www.youtube.com/watch?v=EPYupizJYQI
+==================================================
+Lista - [1, 3, "teste"]
+Join de listas - [1, 2, 4] + ["teste", 5] = [1, 2, 4, "teste", 5]
+lista1 = [1, 2, 3]
+lista2 = lista1
+Variáveis são por referência. Mudar lista2, mudará lista1.
+lista2 = lista1[:] - faz uma cópia de lista1 para lista2 e não atribui referência.
+A maioria dos métodos que funcionam em strings, também funcionarão nas listas.
+lista.append(valor) - insere um valor na lista
+lista.pop(indice) ou del lista[indice] - remove o valor do indice informado
+sorted(lista) - cria uma nova lista ordenada de lista e retorna.
+sorted(lista, reverse=True) - ordenação inversa.
+sorted(lista, key=len) - ordena lista usando uma função de 1 argumento que retorna um índice do valor. Neste exemplo a função é len.
+':'.join(lista) - cria uma string da lista com separador :.
+lista = [] - cria uma lista.
+range(20) - cria uma lista de 0 até 19
+
+Loops:
+======
+for var in lista1:
+	print(var)
+
+Forma resumida de verificar se um valor existe em uma lista:
+lista = [1,2,3]
+if 2 in lista:
+  ... se encontrar 2 na lista entra aqui
+
+None - é um valor Null. Nada.
+
+del lista - remove a definição de lista do escopo.
+
+for i in range(20):
+	... faça 20 vezes alguma coisa.
+
+Tupla
+=====
+É imutável. Não há função de append, nem nada que a modifique. Usa-se para trabalhar com listas fixas imutáveis.
+tupla = (1,2,3)
+
+Ordenação de lista de tuplas. Compara sempre o primeiro valor da tupla, se o primeiro for igual então usa o segundo para ordenação.
+sorted( [(1,"b"),(2,"a"),(1,"a") ] ) - retorna [(1,"a"),(1,"b"),(2,"a") ]
+
+Atribuições
+===========
+(x, y) = (1, 2)
+x - retorna valor 1
+y - retorna valor 2
+
+
+Fonte: https://www.youtube.com/watch?v=haycL41dAhg
+===================================================
+
+Tabela Hash ou Dicionário
+==========================
+tabela = {} - cria uma tabela hash
+tabela['chave'] = 'valor' - insere valor
+tabela['chave'] - retorna valor
+tabela['chaveQueNaoExiste'] - retorna erro.
+tabela.get('chaveQueNaoExiste') - retorna None
+'chave' in tabela - verifica se 'chave' existe na tabela.
+tabela.keys() - retorna uma lista com as chaves da tabela.
+tabela.values() - retorna a lista com os valores da tabela na mesma ordem que keys() retorna as chaves.
+
+for chave in tabela.keys():
+	print( chave + '->' + tabela[chave])
+
+tabela.items() - retorna uma lista de tuplas contendo (chave, valor). [(chave1, valor1), (chave2, valor2), ...]
+
+Cenário: Em um arquivo de log do apache pode-se querer saber quantas consultas um ip fez ao servidor.
+Use hash para inserir tuplas (IP, contador).
+
+
+Arquivos
+===========
+
+def Cat(filename):
+	f = open(filename, 'rU') #r - leitura, U - corrige charset DOS ou UNIX.
+	for line in f:
+		print line, # a virgula no final retira o \n
+	f.close()
+
+linhasLst = f.readlines() # le arquivo inteiro em uma lista
+linhaStr = f.read() # lê arquivo inteiro em uma string.
+f.write( text ) #escreve texto no arquivo
+
+Debugar em python
+=================
+Mostre o objeto.
+Chame sys.exit() para parar o código onde gostaria de parar.
+
+
+https://www.youtube.com/watch?v=kWyoYtvJpe4
+===========================================
+
+Expressões Regulares:
+=====================
+import re
+padrao = 'iig'
+match = re.search(padrao, 'called piiig', re.IGNORECASE)
+dir(re) - mostra as constantes além de IGNORECASE
+match.group() - retorna uma string com o primeiro valor que combinar com o padrão passado. Retorna apenas a primeira combinação encontrada.
+match =  re.search('2', 'frase') - match contém None
+
+lista = re.findall(r'\d\d\d', "Isso 123 é um teste 456") - 
+Encontra todas as ocorrências e retorna a lista ['123', '456'].
+
+def Find(pat, text):
+	match = re.search(pat, text)
+	if match: print match.group()
+	else: print 'não encontrado'
+
+r'C:\caminho\' - faz com que o interpretador não considere \ como caracter especial.
+
+Find(r'\d\d\d\d', 'Pala1234vra') - retonra 1234
+Use a string do padrão desta forma: r'Padrao' para evitar problemas com \.
+
+\s - branco.
+\S - Qualquer caracter não branco.
+
+\w[\w.]*@\w[\w.]* - expressão regular para e-mails.
+
+match = re.search(r'(\w[\w.]*)@(\w[\w.]*)', 'user@domain.com')
+
+match.group(1) - retorna o match do primeiro par de parenteses, neste caso: user.
+
+match.group(2) - retorna o match do primeiro par de parenteses, neste caso: domain.
+
+match = re.findall(r'(\w[\w.]*)@(\w[\w.]*)', 'user@domain.com e teste@exemplo.com') - 
+retorna lista de tuplas [('user', 'domain.com'), ('teste', 'exemplo.com')]
+
+
+https://www.youtube.com/watch?v=uKZ8GBKmeDM
+============================================
+#modulo para chamar funções do sistema operacional
+import os
+
+os.path.abspath - tipo pwd do bash
+os.listdir(diretorio) - lista os nomes dos arquivos do diretorio
+os.path.join(dir, nomeArquivo) - cria um path com diretorio e com separador independente de plataforma.
+os.path.exists('/tmp/foo') - verifica se arquivo exist
+os.mkdir(dir) - cria diretorio
+
+def List(direrorio):
+	filenames = os.listdir(diretorio)
+	for filename in filenames:
+		path = os.path.join(diretorio, filename)
+		print path
+		print os.path.abspath(path)
+
+
+#Shell utilities
+import shutil
+dir(shutil)
+shutil.copy(origem, destino) - copia arquivos
+
+
+import commands
+
+def List(dir):
+	cmd = 'ls -l ' + dir
+	print 'Executando :', cmd
+	#sys.exit(1) para debugar aqui
+	(status, output) = commands.getstatusoutput(cmd) #retorna tupla com status code e output do comando. Bloqueante.
+	if status: #status é diferente de 0 quando há erro
+		print sys.stderr 'houve erro:', output
+		# ou sys.stderr.write('houve erro', output)
+		sys.exit(1);
+	print output
+
+
+https://www.youtube.com/watch?v=Nn2KQmVF5Og
+============================================
+
+Exceções
+========
+#Arquivo cat.py
+
+def Cat(filename):
+	"""
+	Esta seção é a documentação do método. Funcionad como um javadoc e será mostrado como help do método ao chamar help(cat.Cat)
+	"""
+	try:
+		f = open(filename)
+		text = f.read()
+		print '---', filename
+		print text
+	except IOError:
+		print 'IO Error', filename
+
+
+print 'Não faça nada neste nível.'
+
+if __name__ == '__main__':
+	main()
+
+Importando módulos pessoais
+===========================
+#Para importar o arquivo cat.py como módulo faça
+import cat.py 
+
+Será mostrado 'Não faça nada neste nível' pois o comando está sendo executado na fase de load do módulo.
+
+Ao fazer cat.Cat('dir'), entra-se na fase de execução,
+quando __name__ == '__main__' retorna true.
+
+
+Trabalhar com conexões de rede
+==============================
+
+import urllib
+#Funções não funcionam no python 3 desta forma.
+uf = urllib.urlopen('http://google.com')
+html = uf.read()
+urllib.urlretrieve('http://google.com/teste.gif') #faz o download do arquivo teste.gif
+
+
+
+https://www.youtube.com/watch?v=IcteAbMC1Ok
+=============================================
+List comprehension syntax
+
+novaLista = [ funcao(x)  for v in lista ]
+
+lista = ["aaaa", "ddd", "ccc"]
+novalisa = [ len(s)   for s in lista     ]
+
+#Cria lista contendo o dobro de cada valor da lista1
+novalista = [num*num  for num in lista1  if num > 2]
+
+listaArquivosEspeciais = [ f for f in os.listdir('.') if re.search(r'__\w__',f) ]
+
+Use python ao invés de bash. Chame funções externas a partir do python se precisar usar alguma.
+
+
+https://www.youtube.com/watch?v=o9pEzgHorH0
+============================================
+
+
+def Cat(filename):
+	try:
+		f = open(filename)
+		raise TestException() #Lança exceção
+	except IOError:
+		pass
+
+Uma classe com 2 métodos nela não é uma classe. Geralmente criam classes com 2 método e um método chama outro.
+
+heapq - basicamente um array que permanece ordenado.
