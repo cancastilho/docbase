@@ -6,14 +6,14 @@
 
 <p>Para instalar a ferramenta de cobertura de código do python <code>coverage.py</code> use o comando:</p>
 <pre>
-	python -m pip install coverage
+python -m pip install coverage
 </pre>
 <p>Coverage.py permite rodar o script e gerar um relatório de quais partes foram executadas e quais não foram. Execute o seu script com o comando:</p>
 <pre>
-	python coverage run seuScript.py
+python coverage run seuTest.py
 </pre>
 <p>Depois solicite a geração do relatório de cobertura de código com o comando:</p>
 <pre>
-	python coverage html
+python coverage html
 </pre>
 <p>O diretório <code>htmlcov</code> será criado. Entre no diretório e abra o index.html. Lá será possível ver os trechos de código que foram executados e a porcentagem geral de quantas linhas foram executadas no seuTest.py.</p>
